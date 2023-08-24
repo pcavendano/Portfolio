@@ -1,0 +1,172 @@
+@font-face {
+	font-family: "FT Bebas Neue";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../assets/fonts/BebasNeue.woff2") format("woff2"),
+		url("../assets/fonts/BebasNeue.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKEverett";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../assets/fonts/TWKEverett-Regular.woff2") format("woff2"),
+		url("../assets/fonts/TWKEverett-Regular.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKEverett";
+	font-style: normal;
+	font-weight: 700;
+	src: local(""), url("../assets/fonts/TWKEverett-Bold.woff2") format("woff2"),
+		url("../assets/fonts/TWKEverett-Bold.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 300;
+	src: local(""), url("../assets/fonts/TWKLausannePan-300.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-300.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../assets/fonts/TWKLausannePan-400.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-400.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 500;
+	src: local(""), url("../assets/fonts/TWKLausannePan-500.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-500.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 600;
+	src: local(""), url("../assets/fonts/TWKLausannePan-600.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-600.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 700;
+	src: local(""), url("../assets/fonts/TWKLausannePan-700.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-700.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 800;
+	src: local(""), url("../assets/fonts/TWKLausannePan-800.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-800.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 900;
+	src: local(""), url("../assets/fonts/TWKLausannePan-900.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
+}
+
+/* COLORS */
+
+:root {
+	/* 
+    Exemple:
+    --c-white: #fff;
+	--c-black: #000;
+	--c-yellow: #ffd433;
+	--c-green: #009687;
+	--c-peach: #EB9E7D;
+	--c-pink: #ff8fc7;
+	--c-blue: #4f4ae5;
+	--c-bg: var(--c-white);
+	--c-fg: var(--c-black);
+
+	color: var(--c-fg); */
+
+    --c-white: #F2F2F2;
+	--c-black: #000;
+    /* Primary */
+	--c-green: #106B62;
+    /* Secondary */
+	--c-red: #CB3234;
+    /* Accent */
+	--c-yellow: #E3D45D; 
+    /* Text */
+	--c-peach: #FFE5B8;
+    /* Foreground */
+    --c-fg: #BF808C;
+    /* Background */
+	--c-bg: var(--c-green);
+
+	color: var(--c-bg);
+}
+
+/* SPACINGS */
+
+:root {
+	--site: 2560px;
+	--rhythm: 5rem;
+	--gutter: .9rem;
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--rhythm: 10rem;
+		--gutter: 1.6rem;
+	}
+}
+
+/* TEXT */
+
+:root {
+	font-family: "TWKLausanne", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	--fs-xs: 0.55rem;
+	--fs-s: 0.75rem;
+	--fs-m: 1rem;
+	--fs-l: 1.29rem;
+	--fs-xl: 2.05rem;
+	--fs-2xl: 4.2rem;
+}
+  
+@media (min-width: 400px) {
+	:root {
+		font-size: 17px;
+	}
+
+}
+
+@media (min-width: 1024px) {
+	:root {
+		font-size: 1vw;
+		--fs-xs: 0.55rem;
+		--fs-s: 0.75rem;
+		--fs-m: 1rem;
+		--fs-l: 1.5rem;
+		--fs-xl: 3.6rem;
+		--fs-2xl: 17.95rem;
+	}
+}
+
+@media (min-width: 2560px) {
+	:root {
+		font-size: 25px;
+	}
+}
