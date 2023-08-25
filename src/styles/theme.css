@@ -1,3 +1,55 @@
+/* COLORS */
+
+:root {
+	/* 
+    Exemple:
+    --c-white: #fff;
+	--c-black: #000;
+	--c-yellow: #ffd433;
+	--c-green: #009687;
+	--c-peach: #EB9E7D;
+	--c-pink: #ff8fc7;
+	--c-blue: #4f4ae5;
+	--c-bg: var(--c-white);
+	--c-fg: var(--c-black);
+
+	color: var(--c-fg); */
+
+    --c-white: #FFF;
+	--c-black: #000;
+    /* Primary */
+	--c-green: #106B62;
+    /* Secondary */
+	--c-red: #CB3234;
+    /* Accent */
+	--c-yellow: #E3D45D; 
+    /* Text */
+	--c-peach: #FFE5B8;
+    /* Foreground */
+    --c-fg: #14534D;
+    /* Background */
+	--c-bg: var(--c-green);
+
+	color: var(--c-bg);
+}
+
+/* SPACINGS */
+
+:root {
+	--site: 2560px;
+	--rhythm: 5rem;
+	--gutter: .9rem;
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--rhythm: 10rem;
+		--gutter: 1rem;
+	}
+}
+
+/* TEXT */
+
 @font-face {
 	font-family: "FT Bebas Neue";
 	font-style: normal;
@@ -78,64 +130,16 @@
 		url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
 }
 
-/* COLORS */
-
 :root {
-	/* 
-    Exemple:
-    --c-white: #fff;
-	--c-black: #000;
-	--c-yellow: #ffd433;
-	--c-green: #009687;
-	--c-peach: #EB9E7D;
-	--c-pink: #ff8fc7;
-	--c-blue: #4f4ae5;
-	--c-bg: var(--c-white);
-	--c-fg: var(--c-black);
-
-	color: var(--c-fg); */
-
-    --c-white: #F2F2F2;
-	--c-black: #000;
-    /* Primary */
-	--c-green: #106B62;
-    /* Secondary */
-	--c-red: #CB3234;
-    /* Accent */
-	--c-yellow: #E3D45D; 
-    /* Text */
-	--c-peach: #FFE5B8;
-    /* Foreground */
-    --c-fg: #BF808C;
-    /* Background */
-	--c-bg: var(--c-green);
-
-	color: var(--c-bg);
-}
-
-/* SPACINGS */
-
-:root {
-	--site: 2560px;
-	--rhythm: 5rem;
-	--gutter: .9rem;
-}
-
-@media (min-width: 1024px) {
-	:root {
-		--rhythm: 10rem;
-		--gutter: 1.6rem;
-	}
-}
-
-/* TEXT */
-
-:root {
-	font-family: "TWKLausanne", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol";
+	--ff-sans: TWKLausanne,, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--ff-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--ff-ss:  -apple-system, BlinkMacSystemFont, "Segoe UI",
+	font-family: var(--ff-sans);
 	font-size: 14px;
 	font-weight: 400;
+	background: var(--c-fg);
+    color: var(--c-peach);
 	line-height: 1.2;
 
 	--fs-xs: 0.55rem;
@@ -169,4 +173,9 @@
 	:root {
 		font-size: 25px;
 	}
+}
+
+::selection {
+    background-color: var(--c-yellow);
+	color: var(--c-darkgreen);
 }

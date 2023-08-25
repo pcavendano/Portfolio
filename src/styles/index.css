@@ -1,21 +1,24 @@
 /* FRAMEWORK */
 @import "reset.css";
 @import "theme.css";
-@import "btn.css";
-@import "img.css";
+@import "utils.css";
+/* @import "btn.css"; */
+/* @import "img.css"; */
 /* @import "prose.css"; */
 
 /* PAGES */
-@import "default.css";
-/* @import "home.css";
+/* @import "default.css";
 @import "home-about.css";
 @import "home-projects.css";
 @import "contact.css"; */
+@import "home.css";
 
 /* COM */
 /* @import "article-item.css";
 @import "project-item.css";
 @import "to-top.css"; */
+@import "site-header.css";
+@import "site-menu.css";
 
 /* BLOCKS */
 /* @import "_blocks.css";
