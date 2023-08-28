@@ -20,7 +20,7 @@
     /* Primary */
 	--c-green: #106B62;
     /* Secondary */
-	--c-red: #CB3234;
+	--c-red: #EB653F;
     /* Accent */
 	--c-yellow: #E3D45D; 
     /* Text */
@@ -78,7 +78,7 @@
 	font-family: "TWKLausanne";
 	font-style: normal;
 	font-weight: 300;
-	src: local(""), url("../assets/fonts/TWKLausannePan-300.woff2") format("woff2"),
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-300.woff2") format("woff2"),
 		url("../assets/fonts/TWKLausannePan-300.woff2") format("woff");
 }
 
@@ -86,7 +86,7 @@
 	font-family: "TWKLausanne";
 	font-style: normal;
 	font-weight: 400;
-	src: local(""), url("../assets/fonts/TWKLausannePan-400.woff2") format("woff2"),
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-400.woff2") format("woff2"),
 		url("../assets/fonts/TWKLausannePan-400.woff2") format("woff");
 }
 
@@ -102,7 +102,7 @@
 	font-family: "TWKLausanne";
 	font-style: normal;
 	font-weight: 600;
-	src: local(""), url("../assets/fonts/TWKLausannePan-600.woff2") format("woff2"),
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-600.woff2") format("woff2"),
 		url("../assets/fonts/TWKLausannePan-600.woff2") format("woff");
 }
 
@@ -110,7 +110,7 @@
 	font-family: "TWKLausanne";
 	font-style: normal;
 	font-weight: 700;
-	src: local(""), url("../assets/fonts/TWKLausannePan-700.woff2") format("woff2"),
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-700.woff2") format("woff2"),
 		url("../assets/fonts/TWKLausannePan-700.woff2") format("woff");
 }
 
@@ -118,7 +118,7 @@
 	font-family: "TWKLausanne";
 	font-style: normal;
 	font-weight: 800;
-	src: local(""), url("../assets/fonts/TWKLausannePan-800.woff2") format("woff2"),
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-800.woff2") format("woff2"),
 		url("../assets/fonts/TWKLausannePan-800.woff2") format("woff");
 }
 
@@ -131,16 +131,16 @@
 }
 
 :root {
-	--ff-sans: TWKLausanne,, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-	--ff-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--ff-serif: FT Bebas Neue,Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	--ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	--ff-ss:  -apple-system, BlinkMacSystemFont, "Segoe UI",
 	font-family: var(--ff-sans);
 	font-size: 14px;
 	font-weight: 400;
 	background: var(--c-fg);
     color: var(--c-peach);
 	line-height: 1.2;
+	letter-spacing: .1rem;
 
 	--fs-xs: 0.55rem;
 	--fs-s: 0.75rem;
@@ -148,6 +148,11 @@
 	--fs-l: 1.29rem;
 	--fs-xl: 2.05rem;
 	--fs-2xl: 4.2rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--ff-serif);
+
 }
   
 @media (min-width: 400px) {
