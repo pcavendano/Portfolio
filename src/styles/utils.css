@@ -1,24 +1,13 @@
-.ctn {
-	margin: 0 auto;
-	padding: 0 var(--inner);
-	max-width: var(--site);
-}
-
 #page {
 	max-width: var(--site);
-	margin: 0 auto;
+    margin: var(--gutter);
 }
 
 #page main {
-	background: var(--c-bg);
-	overflow: hidden;
-	z-index: 0;
-	position: relative;
+    background: var(--c-bg);
 }
 
 @media (min-width: 1024px) {
 	#page main {
-		border-radius: 0 0 0.5rem 0.5rem;
-		margin: 0 var(--gutter);
 	}
 }
