@@ -17,11 +17,11 @@ const Navbar = () => {
             <nav>
                 <div className="site-logo">
                     <a className="fullname" href="/">
-                        <span className="firstName">Pedro</span>
-                        <span className="lastName">Contreras</span>
+                        <span className="firstName">Lorem</span>
+                        <span className="lastName">ipsum</span>
                         <span className="lastName">Avendano</span>
                     </a>
-                    <span className="profession">Full Stack Web Developer</span>
+                    <span className="profession">Developer advocate</span>
                 </div>
                 <ul>
                     <li>
