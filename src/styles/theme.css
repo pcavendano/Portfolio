@@ -44,12 +44,13 @@
 @media (min-width: 1024px) {
 	:root {
 		--rhythm: 10rem;
-		--gutter: 1rem;
+		--gutter: 2rem;
 	}
 }
 
 /* TEXT */
 
+/* https://fonts.google.com/specimen/Abril+Fatface?preview.text=Full%20Stack%0D%0AWeb%20Developer%0D%0Aconsecte%20to%20adipiscingin&preview.text_type=custom&category=Serif,Display,Handwriting,Monospace */
 @font-face {
 	font-family: "FT Bebas Neue";
 	font-style: normal;
@@ -169,8 +170,8 @@ h1,h2,h3,h4,h5,h6 {
 		--fs-s: 0.75rem;
 		--fs-m: 1rem;
 		--fs-l: 1.5rem;
-		--fs-xl: 3.6rem;
-		--fs-2xl: 17.95rem;
+		--fs-xl: 3.5rem;
+		--fs-2xl: 6rem;
 	}
 }
 
