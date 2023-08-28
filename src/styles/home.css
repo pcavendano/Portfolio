@@ -1,16 +1,13 @@
 /* #page.home {} */
 
 .home_hero {
-    position: relative;
-    display: grid;
-    z-index: 5000;
-    background: var(--c-bg);
-    height: 100vh;
+}
+
+.home_hero .ctn {
 }
 
 @media (min-width: 1024px) {
     .home_hero {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -21,6 +18,8 @@
 @media (min-width: 1024px) {
     .home_hero figure {
         display: block;
+        width: 50%;
+        margin-left: auto;
     }
 }
 
