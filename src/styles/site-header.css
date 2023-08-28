@@ -1,17 +1,17 @@
 .site-header {
 	position: sticky;
 	top: 0;
+	background-color: var(--c-bg);
+	border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .site-header nav {
 	max-width: var(--site);
 	padding: var(--gutter);
 	align-items: center;
-	border-bottom: 1px solid var(--c-white );
-	margin: 0 var(--gutter);
+	border-bottom: 1px solid var(--c-peach );
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .site-header .site-logo {
@@ -29,8 +29,13 @@
 }
 
 
+.site-header .firstName {
+	font-weight: 700;
+}
+
 .site-header .lastName {
 	font-weight: 200;
+	z-index: 10;
 }
 
 .site-header .profession {
@@ -40,8 +45,8 @@
 }
 
 .site-header ul {
-	display: flex;
-	justify-content: flex-end;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .site-header ul a {
@@ -50,7 +55,6 @@
 	padding: .5rem 1.5rem;
 	margin-left: 6rem;
 	border-radius:30px;
-	box-shadow: -4px 4px 0 1px rgba(235, 101, 63, .7);
 	position: relative;
 	left: 0px;
 	right: 0px;
@@ -65,25 +69,25 @@
 	right: 4px;
 	bottom: -4px;
 	position: absolute;
-	display: inline-block;
 	border-radius:30px;
+	border: 2px solid var(--c-red);
 	z-index: -1;
 	background-color: var(--c-peach);
+	box-shadow: 4px -4px 10px 1px rgba(235, 101, 63, .7) inset;
 	transition: all .2s ease-in-out;
 }
 
 .site-header ul a:hover {
 	cursor: pointer;
-	color: var(--c-green);
 	left: -4px;
 	right: 4px;
-	box-shadow: -4px 4px 0 1px rgba(235, 101, 63, 0);
 	bottom: -4px;
+	padding: .5rem 1.3rem;
 }
 
 .site-header ul a:hover::before {
-	left: 1px;
-	right: 2px;
+	left: 0px;
+	right: 0px;
 	bottom: 2px;
 }
 
@@ -92,5 +96,20 @@
 	background-color: var(--c-black);
 }
 
+.site-header ul a:visited {
+	color: var(--c-peach);
+	background-color: var(--c-black);
+}
+
+.site-header .hireme {
+	background-color: var(--c-black);
+}
+.site-header .fire {
+	display: inline-block;
+	height: 1rem;
+	position: relative;
+	z-index: 10;
+	padding-left: .2rem;
+}
 
  
