@@ -9,5 +9,6 @@
 
 @media (min-width: 1024px) {
 	#page main {
+        position: relative;
 	}
 }
