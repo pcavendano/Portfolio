@@ -1,22 +1,38 @@
-.btn-container {
-    position: relative;
-    z-index: 1;
-  }
-  
+@media screen and (min-width: 1024px) {
+    .btn-container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .btn-container {
+        justify-content: left;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        display: unset;
+    }
+}
+
 .btn::before {
-    content: '';
+    content: "";
     position: absolute;
     opacity: 0.9;
     top: 0px;
     bottom: -4px;
     left: -4px;
     right: 0px;
-	border-radius:30px;
-	border: 2px solid var(--c-red);
-	background-color: var(--c-peach);
-	box-shadow: 4px -4px 10px 1px rgba(235, 101, 63, .7) inset;
+    border-radius: 30px;
+    border: 2px solid var(--c-red);
+    background-color: var(--c-peach);
+    box-shadow: 4px -4px 10px 1px rgba(235, 101, 63, 0.7) inset;
     z-index: -1;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn {
@@ -29,7 +45,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -41,7 +57,7 @@
 }
 
 .btn:hover::before {
-	left: 1px;
-	right: 1px;
-	bottom: 2px;
+    left: 1px;
+    right: 1px;
+    bottom: 2px;
 }
