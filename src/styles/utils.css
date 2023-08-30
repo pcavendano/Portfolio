@@ -1,14 +1,24 @@
 #page {
 	max-width: var(--site);
-    margin: var(--gutter);
+    margin: 0rem;
+	overflow: hidden; 
+}
+
+@media screen and (min-width: 1024px) {
+	#page {
+		margin: 0 auto;
+		padding: var(--gutter);
+		max-width: 1980px;
+	}
+	
 }
 
 #page main {
-    background: var(--c-bg);
+	background: var(--c-bg);
 }
 
 @media (min-width: 1024px) {
 	#page main {
-        position: relative;
+		overflow: hidden;
 	}
 }
