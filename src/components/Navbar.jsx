@@ -15,26 +15,24 @@ const Navbar = () => {
     return (
         <header className="site-header">
             <nav>
-                <div className="site-logo">
-                    <a className="fullname" href="/">
-                        <span className="firstName">Lorem</span>
-                        <span className="lastName">ipsum</span>
-                        <span className="lastName">Avendano</span>
-                    </a>
-                    <span className="profession">Developer advocate</span>
-                </div>
-                <ul>
+                <a className="fullname" href="/">
+                    <span className="firstName">Pedro</span>
+                    <span className="lastName">Contreras</span>
+                    <span className="lastName">Avendano</span>
+                </a>
+                <span className="profession">
+                    Full Stack Web <span>Developer</span>
+                </span>
+                <ul className="menu">
                     <li>
-                        <div className="decorative-space">
-                            <a href="/about">About</a>
-                        </div>
+                        <a className="btn" href="/about">about</a>
                     </li>
                     <li>
-                        <a href="/projects">Projects</a>
+                        <a className="btn" href="/projects">projects</a>
                     </li>
                     <li>
-                        <a className="hireme" href="/" target="_blank">
-                            <span>Hire Me</span>
+                        <a className="btn hireme" href="/" target="_blank">
+                            <span>hire me</span>
                             <Lottie
                                 className="fire"
                                 animationData={fire}
