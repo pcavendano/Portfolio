@@ -36,15 +36,29 @@
 /* SPACINGS */
 
 :root {
-	--site: 2560px;
-	--rhythm: 5rem;
-	--gutter: .9rem;
+	/* 
+	--rhythm: 4.5rem;
+	--gutter: 1rem;
+	--inner: 1rem;
+	--site: 2560px; 
+	*/
+	--rhythm: 2rem;
+	--gutter: 1.5rem;
+	--inner:1rem;
 }
 
 @media (min-width: 1024px) {
 	:root {
-		--rhythm: 10rem;
-		--gutter: 2rem;
+		/* 
+		--rhythm: 7rem;
+		--gutter: 1rem;
+		--inner: 4.5rem;
+		--site: 2560px; 
+		*/
+		--rhythm: 5rem;
+		--gutter: 1rem;
+		--inner: 2rem;
+		--site: 1920px;
 	}
 }
 
@@ -73,6 +87,22 @@
 	font-weight: 700;
 	src: local(""), url("../assets/fonts/TWKEverett-Bold.woff2") format("woff2"),
 		url("../assets/fonts/TWKEverett-Bold.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 100;
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-100.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-100.woff2") format("woff");
+}
+
+@font-face {
+	font-family: "TWKLausanne";
+	font-style: normal;
+	font-weight: 200;
+	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-200.woff2") format("woff2"),
+		url("../assets/fonts/TWKLausannePan-200.woff2") format("woff");
 }
 
 @font-face {
@@ -131,6 +161,7 @@
 		url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
 }
 
+/* Setting font related properties */
 :root {
 	--ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 	--ff-serif: FT Bebas Neue,Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -146,32 +177,37 @@
 	--fs-xs: 0.55rem;
 	--fs-s: 0.75rem;
 	--fs-m: 1rem;
-	--fs-l: 1.29rem;
-	--fs-xl: 2.05rem;
+	--fs-l: 1.6rem;
+	--fs-xl: 2.6rem;
 	--fs-2xl: 4.2rem;
+	
+	--fw--light: 200;
+	--fw-bold: 700;
 }
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: var(--ff-serif);
 
 }
-  
-@media (min-width: 400px) {
-	:root {
-		font-size: 17px;
-	}
 
+h2,h3,h4,h5,h6 {
+	color: var(--c-red);
 }
+  
 
 @media (min-width: 1024px) {
+	/* 
+	golden ratio possbilites:
+	1, 1.6, 2.6, 4.2, 6.8, 11.1 
+	*/
 	:root {
 		font-size: 1vw;
 		--fs-xs: 0.55rem;
 		--fs-s: 0.75rem;
 		--fs-m: 1rem;
-		--fs-l: 1.5rem;
-		--fs-xl: 3.5rem;
-		--fs-2xl: 6rem;
+		--fs-l: 1.6rem;
+		--fs-xl: 4.2rem;
+		--fs-2xl: 6.8rem;
 	}
 }
 
