@@ -1,7 +1,7 @@
 /* COLORS */
 
 :root {
-	/* 
+    /* 
     Exemple:
     --c-white: #fff;
 	--c-black: #000;
@@ -15,209 +15,240 @@
 
 	color: var(--c-fg); */
 
-    --c-white: #FFF;
-	--c-black: #000;
+    --c-white: #fff;
+    --c-black: #000;
     /* Primary */
-	--c-green: #106B62;
+    --c-green: #106b62;
     /* Secondary */
-	--c-red: #EB653F;
+    --c-red: #ea572f;
+    /* Tertiary */
+    --c-accent: #ce4b27;
     /* Accent */
-	--c-yellow: #E3D45D; 
+    --c-yellow: #e3d45d;
     /* Text */
-	--c-peach: #FFE5B8;
+    --c-peach: #ffe5b8;
     /* Foreground */
-    --c-fg: #14534D;
+    --c-fg: #14534d;
     /* Background */
-	--c-bg: var(--c-green);
+    --c-bg: var(--c-green);
 
-	color: var(--c-bg);
+    color: var(--c-bg);
 }
 
 /* SPACINGS */
 
 :root {
-	/* 
+    /* 
 	--rhythm: 4.5rem;
 	--gutter: 1rem;
 	--inner: 1rem;
 	--site: 2560px; 
 	*/
-	--rhythm: 2rem;
-	--gutter: 1.5rem;
-	--inner:.5rem;
+    --rhythm: 2rem;
+    --gutter: 1.5rem;
+    --inner: 0.5rem;
 }
 
 @media (min-width: 1024px) {
-	:root {
-		/* 
+    :root {
+        /* 
 		--rhythm: 7rem;
 		--gutter: 1rem;
 		--inner: 4.5rem;
 		--site: 2560px; 
 		*/
-		--rhythm: 3rem;
-		--gutter: 1rem;
-		--inner: 2rem;
-		--site: 1920px;
-	}
+        --rhythm: 3rem;
+        --gutter: 1rem;
+        --inner: 2rem;
+        --site: 1920px;
+    }
 }
 
 /* TEXT */
 
 /* https://fonts.google.com/specimen/Abril+Fatface?preview.text=Full%20Stack%0D%0AWeb%20Developer%0D%0Aconsecte%20to%20adipiscingin&preview.text_type=custom&category=Serif,Display,Handwriting,Monospace */
 @font-face {
-	font-family: "FT Bebas Neue";
-	font-style: normal;
-	font-weight: 400;
-	src: local(""), url("../assets/fonts/BebasNeue.woff2") format("woff2"),
-		url("../assets/fonts/BebasNeue.woff2") format("woff");
+    font-family: "FT Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../assets/fonts/BebasNeue.woff2") format("woff2"),
+        url("../assets/fonts/BebasNeue.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKEverett";
-	font-style: normal;
-	font-weight: 400;
-	src: local(""), url("../assets/fonts/TWKEverett-Regular.woff2") format("woff2"),
-		url("../assets/fonts/TWKEverett-Regular.woff2") format("woff");
+    font-family: "TWKEverett";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../assets/fonts/TWKEverett-Regular.woff2") format("woff2"),
+        url("../assets/fonts/TWKEverett-Regular.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKEverett";
-	font-style: normal;
-	font-weight: 700;
-	src: local(""), url("../assets/fonts/TWKEverett-Bold.woff2") format("woff2"),
-		url("../assets/fonts/TWKEverett-Bold.woff2") format("woff");
+    font-family: "TWKEverett";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../assets/fonts/TWKEverett-Bold.woff2") format("woff2"),
+        url("../assets/fonts/TWKEverett-Bold.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 100;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-100.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-100.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-100.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-100.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 200;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-200.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-200.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 200;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-200.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-200.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 300;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-300.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-300.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-300.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-300.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 400;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-400.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-400.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-400.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-400.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 500;
-	src: local(""), url("../assets/fonts/TWKLausannePan-500.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-500.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""),
+        url("../assets/fonts/TWKLausannePan-500.woff2") format("woff2"),
+        url("../assets/fonts/TWKLausannePan-500.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 600;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-600.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-600.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 600;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-600.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-600.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 700;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-700.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-700.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-700.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-700.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 800;
-	src: local(""), url("../assets/fonts/TWKLausanne/TWKLausannePan-800.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-800.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 800;
+    src: local(""),
+        url("../assets/fonts/TWKLausanne/TWKLausannePan-800.woff2")
+            format("woff2"),
+        url("../assets/fonts/TWKLausannePan-800.woff2") format("woff");
 }
 
 @font-face {
-	font-family: "TWKLausanne";
-	font-style: normal;
-	font-weight: 900;
-	src: local(""), url("../assets/fonts/TWKLausannePan-900.woff2") format("woff2"),
-		url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
+    font-family: "TWKLausanne";
+    font-style: normal;
+    font-weight: 900;
+    src: local(""),
+        url("../assets/fonts/TWKLausannePan-900.woff2") format("woff2"),
+        url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
 }
 
 /* Setting font related properties */
 :root {
-	--ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-	--ff-serif: FT Bebas Neue,Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-	--ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	font-family: var(--ff-sans);
-	font-size: 14px;
-	font-weight: 400;
-	background: var(--c-fg);
+    --ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next,
+        avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
+        noto, arial, sans-serif;
+    --ff-serif: FT Bebas Neue, Iowan Old Style, Apple Garamond, Baskerville,
+        Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+        monospace;
+    font-family: var(--ff-sans);
+    font-size: 14px;
+    font-weight: 400;
+    background: var(--c-fg);
     color: var(--c-peach);
-	line-height: 1.2;
-	letter-spacing: .1rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
 
-	--fs-xs: 0.55rem;
-	--fs-s: 0.75rem;
-	--fs-m: 1rem;
-	--fs-l: 1.6rem;
-	--fs-xl: 2.6rem;
-	--fs-2xl: 4.2rem;
-	
-	--fw--light: 200;
-	--fw-bold: 700;
+    --fs-xs: 0.55rem;
+    --fs-s: 0.75rem;
+    --fs-m: 1rem;
+    --fs-l: 1.6rem;
+    --fs-xl: 2.6rem;
+    --fs-2xl: 4.2rem;
+
+    --fw--light: 200;
+    --fw-bold: 700;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: var(--ff-serif);
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-serif);
 }
 
-h2,h3,h4,h5,h6 {
-	color: var(--c-red);
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--c-red);
 }
-  
 
 @media (min-width: 1024px) {
-	/* 
+    /* 
 	golden ratio possbilites:
 	1, 1.6, 2.6, 4.2, 6.8, 11.1 
 	*/
-	:root {
-		font-size: 1vw;
-		--fs-xs: 0.55rem;
-		--fs-s: 0.75rem;
-		--fs-m: 1.6rem;
-		--fs-l: 2.6rem;
-		--fs-xl: 4.2rem;
-		--fs-2xl: 6.8rem;
-	}
+    :root {
+        font-size: 1vw;
+        --fs-xs: 0.55rem;
+        --fs-s: 0.75rem;
+        --fs-m: 1.6rem;
+        --fs-l: 2.6rem;
+        --fs-xl: 4.2rem;
+        --fs-2xl: 6.8rem;
+    }
 }
 
 @media (min-width: 2560px) {
-	:root {
-		font-size: 25px;
-	}
+    :root {
+        font-size: 25px;
+    }
 }
 
 ::selection {
     background-color: var(--c-yellow);
-	color: var(--c-darkgreen);
+    color: var(--c-darkgreen);
 }
