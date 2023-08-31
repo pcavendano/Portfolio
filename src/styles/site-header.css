@@ -4,6 +4,10 @@
     background-color: var(--c-bg);
     border-radius: 0.5rem 0.5rem 0 0;
     z-index: 10;
+    background: rgba(16, 107, 98, 0.55);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.9px);
+    -webkit-backdrop-filter: blur(13.9px);
 }
 
 .site-header nav {
@@ -20,8 +24,7 @@
 
 @media screen and (min-width: 1024px) {
     .site-header nav {
-        grid-template-areas:
-        "fullname profession menu menu";
+        grid-template-areas: "fullname profession menu menu";
     }
 }
 
@@ -58,6 +61,13 @@
     display: flex;
     justify-content: space-between;
     grid-area: menu;
+    margin-top: var(--inner);
+}
+
+@media screen and (min-width: 1024px) {
+    .site-header .menu {
+        margin-top: 0;
+    }
 }
 
 .site-header .menu a {
