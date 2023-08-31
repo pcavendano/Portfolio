@@ -152,7 +152,6 @@ const About = () => {
                             to contribute and collaborate on interesting
                             projects for the long term.
                         </p>
-                        <br />
                     </article>
                 </section>
             </div>
