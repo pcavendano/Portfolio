@@ -32,7 +32,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <a className="btn hireme" href="/" target="_blank">
-                            <span>hire me</span>
+                            <span>contact me</span>
                             <Lottie
                                 className="fire"
                                 animationData={fire}
