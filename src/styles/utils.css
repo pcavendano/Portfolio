@@ -9,6 +9,7 @@
 		margin: 0 auto;
 		padding: var(--gutter);
 		max-width: 1980px;
+		position: relative;
 	}
 	
 }
