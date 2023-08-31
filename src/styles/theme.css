@@ -44,7 +44,7 @@
 	*/
 	--rhythm: 2rem;
 	--gutter: 1.5rem;
-	--inner:1rem;
+	--inner:.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -55,7 +55,7 @@
 		--inner: 4.5rem;
 		--site: 2560px; 
 		*/
-		--rhythm: 5rem;
+		--rhythm: 3rem;
 		--gutter: 1rem;
 		--inner: 2rem;
 		--site: 1920px;
@@ -204,8 +204,8 @@ h2,h3,h4,h5,h6 {
 		font-size: 1vw;
 		--fs-xs: 0.55rem;
 		--fs-s: 0.75rem;
-		--fs-m: 1rem;
-		--fs-l: 1.6rem;
+		--fs-m: 1.6rem;
+		--fs-l: 2.6rem;
 		--fs-xl: 4.2rem;
 		--fs-2xl: 6.8rem;
 	}
