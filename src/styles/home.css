@@ -96,6 +96,7 @@
 @media screen and (min-width: 1024px) {
     .home_about .arrow-desktop {
         display: block;
+        margin-bottom: var(--rhythm);
     }
 }
 
@@ -123,13 +124,16 @@
 
 .home_about .about-container {
     position: relative;
+    background-color: var(--c-peach);
+    border-radius: 50px;
+    color: var(--c-bg);
 }
 
 .home_about .ellipse {
     position: absolute;
-    bottom: 0%;
+    bottom: 20%;
     translate: -10%;
-    width: 300%;
+    width: 100%;
     opacity: 0.8;
 }
 
@@ -140,6 +144,7 @@
         width: 200%;
     }
 }
+
 
 .home_about .about,
 .skills {
@@ -162,12 +167,13 @@
     .home_about .skills {
         max-width: 700px;
         margin-right: 50%;
+        margin-left: var(--gutter);
     }
 }
 
 .home_about article {
     letter-spacing: 1px;
-    padding: var(--gutter);
+    padding: var(--gutter) 0;
     font-size: var(--fs-l);
     line-height: 2.4rem;
     font-weight: 200;
@@ -184,7 +190,7 @@
 }
 
 .home_about h2 {
-    text-align: center;
+    padding-top: var(--gutter);
     font-size: var(--fs-xl);
 }
 
