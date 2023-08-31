@@ -81,6 +81,14 @@
     width: 2rem;
 }
 
+.home_hero .cv svg {
+    width: 1rem;
+    display: inline-block;
+    margin-left: var(--gutter);
+    position: relative;
+    bottom: -2px;
+}
+
 .home_about .arrow-desktop {
     display: none;
 }
