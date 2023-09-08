@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-// import pedro from '../assets/pedro5.jpg'
-import pedro from "../assets/hero_pedro_right.png";
+import pedro from "../assets/hero_pedro.png";
 
 const Hero = () => {
     const linkedinRef = useRef(null);
@@ -28,12 +27,12 @@ const Hero = () => {
             </figure>
             <div className="content">
                 <h1>
-                    Full Stack
+                    Développeur Web
                     <br />
-                    Web Developer
+                    Full-Stack
                     <br />
-                    <span className="open">Open</span>
-                    To Opportunities
+                    <span className="open">Ouvert </span>
+                    Aux Opportunités
                 </h1>
                 <p>
                     I&apos;m a food enthusiast building interactive web products
