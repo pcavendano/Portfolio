@@ -294,7 +294,7 @@ Projects section
 .home_projects .ghipy {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
