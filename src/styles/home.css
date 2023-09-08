@@ -264,19 +264,19 @@ Projects section
 }
 
 .home_projects header {
-    margin: var(--rhythm) 0;
+    margin: calc(var(--rhythm) * 3) 0;
     padding: 0 var(--rhythm);
 }
 
 @media screen and (min-width: 1024px) {
     .home_projects header {
-        margin: calc(var(--rhythm) * 2) 0;
+        margin: calc(var(--rhythm) * 3) 0;
         padding: 0 4rem;
     }
 }
 
 .home_projects h2 {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
 }
 
 @media screen and (min-width: 1024px) {
@@ -289,7 +289,7 @@ Projects section
     display: inline-block;
     border: 2px solid var(--c-black);
     margin-right: var(--inner);
-    height: var(--fs-2xl);
+    height: var(--fs-3xl);
 }
 
 .home_projects .project_ctn {

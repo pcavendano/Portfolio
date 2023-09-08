@@ -10,8 +10,6 @@ const Projects = () => {
             <header>
                 <h2>
                     <span className="ghipy">
-                        Mes
-                        <br />
                         <iframe
                             style={{
                                 aspectRatio: "16/9",
@@ -21,7 +19,7 @@ const Projects = () => {
                             className="giphy-embed"
                             allowFullScreen
                         ></iframe>
-                        Projets
+                        Mes Projets
                     </span>
                 </h2>
             </header>
@@ -69,9 +67,12 @@ const Projects = () => {
                                     alt="bouteille de sauce piquante"
                                 />
                             </span>
-                            <Ingredient title={"Avant de commencer"} bg={"red"}/>
-                            <Ingredient title={"Ingrédients"} bg={"red"}/>
-                            <Ingredient title={"Préparation"} bg={"red"}/>
+                            <Ingredient
+                                title={"Avant de commencer"}
+                                bg={"red"}
+                            />
+                            <Ingredient title={"Ingrédients"} bg={"red"} />
+                            <Ingredient title={"Préparation"} bg={"red"} />
                         </div>
                         <div className="project_image">
                             <a
@@ -80,7 +81,10 @@ const Projects = () => {
                                 rel="noopener noreferrer"
                             >
                                 <figure>
-                                    <img src={mm} alt="collage de photos du projet meilleur monde" />
+                                    <img
+                                        src={mm}
+                                        alt="collage de photos du projet meilleur monde"
+                                    />
                                 </figure>
                             </a>
                         </div>
