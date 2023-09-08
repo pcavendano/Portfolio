@@ -35,8 +35,7 @@ const Hero = () => {
                     Aux Opportunités
                 </h1>
                 <p>
-                    I&apos;m a food enthusiast building interactive web products
-                    - ready to commit, learn, adapt and improve.
+                    Passionné de cuisine qui construit des produits web interactifs - prêt à m&apos;engager, apprendre, m&apos;adapter et m&apos;améliorer.
                 </p>
                 <div className="links">
                     <ul>
