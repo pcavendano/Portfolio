@@ -46,7 +46,7 @@
 	*/
     --rhythm: 2rem;
     --gutter: 1.5rem;
-    --inner: 0.5rem;
+    --inner: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -57,7 +57,7 @@
 		--inner: 4.5rem;
 		--site: 2560px; 
 		*/
-        --rhythm: 3rem;
+        --rhythm: 6rem;
         --gutter: 1rem;
         --inner: 2rem;
         --site: 1920px;
@@ -67,8 +67,59 @@
 /* TEXT */
 
 /* https://fonts.google.com/specimen/Abril+Fatface?preview.text=Full%20Stack%0D%0AWeb%20Developer%0D%0Aconsecte%20to%20adipiscingin&preview.text_type=custom&category=Serif,Display,Handwriting,Monospace */
+
+/* Paytone One */
+/* latin-ext */
 @font-face {
-    font-family: "FT Bebas Neue";
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/paytoneone/v23/0nksC9P7MfYHj2oFtYm2ChTjgPvNiA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/paytoneone/v23/0nksC9P7MfYHj2oFtYm2ChTtgPs.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* Spectral */
+@font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/spectral/v13/rnCr-xNNww_2s0amA9M5kng.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+ 
+  /* chango */
+  @font-face {
+    font-family: 'Chango';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/chango/v27/2V0cKI0OB5U7WaJCyHe5.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* Inknut Antiqua */
+  @font-face {
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inknutantiqua/v14/Y4GSYax7VC4ot_qNB4nYpBdaKUUE4J0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: "Bebas";
     font-style: normal;
     font-weight: 400;
     src: local(""), url("../assets/fonts/BebasNeue.woff2") format("woff2"),
@@ -185,7 +236,7 @@
     --ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next,
         avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
         noto, arial, sans-serif;
-    --ff-serif: FT Bebas Neue, Iowan Old Style, Apple Garamond, Baskerville,
+    --ff-serif: Paytone One,Bebas, Iowan Old Style, Apple Garamond, Baskerville,
         Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
         Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     --ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
@@ -239,6 +290,7 @@ h6 {
         --fs-l: 2.6rem;
         --fs-xl: 4.2rem;
         --fs-2xl: 6.8rem;
+		--fs-3xl: 11.1rem;
     }
 }
 
