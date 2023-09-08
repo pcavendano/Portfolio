@@ -96,7 +96,7 @@ const About = () => {
                 </div>
                 <section className="about">
                     <header>
-                        <h2>About</h2>
+                        <h2>À propos</h2>
                     </header>
                     <article>
                         <p>
@@ -112,12 +112,11 @@ const About = () => {
                             to the digital world, alongside other like-minded
                             repairers, improvers and creators.
                         </p>
-                        <br />
                     </article>
                 </section>
                 <section className="skills">
                     <header>
-                        <h2>My Skills</h2>
+                        <h2>Savoir&#8208;Faire</h2>
                     </header>
                     <article>
                         <h3>Design</h3>
