@@ -275,6 +275,7 @@ Projects section
 
 .home_projects h2 {
     font-size: var(--fs-2xl);
+    white-space: nowrap;
 }
 
 @media screen and (min-width: 1024px) {
@@ -291,7 +292,7 @@ Projects section
 
 .home_projects .ghipy {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 @media screen and (min-width: 1024px) {
