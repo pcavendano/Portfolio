@@ -21,18 +21,18 @@ const Navbar = () => {
                     <span className="lastName">Avendano</span>
                 </a>
                 <span className="profession">
-                    Full Stack Web <span>Developer</span>
+                    Développeur Web <span>Full-Stack</span>
                 </span>
                 <ul className="menu">
                     <li>
-                        <a className="btn" href="/about">about</a>
+                        <a className="btn" href="/about">à propos</a>
                     </li>
                     <li>
-                        <a className="btn" href="/projects">projects</a>
+                        <a className="btn" href="/projects">projets</a>
                     </li>
                     <li>
-                        <a className="btn hireme" href="/" target="_blank">
-                            <span>contact me</span>
+                        <a className="btn hireme"  href="mailto:pcavendano.dev@gmail.com" target="_blank" rel="noreferrer">
+                            <span>contactez-moi</span>
                             <Lottie
                                 className="fire"
                                 animationData={fire}
