@@ -274,7 +274,13 @@ Projects section
 }
 
 .home_projects h2 {
-    font-size: var(--fs-3xl);
+    font-size: var(--fs-2xl);
+}
+
+@media screen and (min-width: 1024px) {
+    .home_projects h2 {
+        font-size: var(--fs-3xl);
+    }
 }
 
 @media screen and (min-width: 1024px) {
