@@ -19,7 +19,7 @@ const Projects = () => {
                             className="giphy-embed"
                             allowFullScreen
                         ></iframe>
-                        Mes Projets
+                        <span>Mes Projets</span>
                     </span>
                 </h2>
             </header>
