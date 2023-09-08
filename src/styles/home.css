@@ -74,6 +74,7 @@
         font-size: var(--fs-xl);
         line-height: 1.1;
         letter-spacing: 2px;
+        text-align: unset;
     }
 }
 
@@ -82,6 +83,16 @@
     max-width: 38ch;
     line-height: 2rem;
     letter-spacing: 2px;
+}
+
+.home_hero .links {
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .home_hero .links {
+        margin: unset;
+    }
 }
 
 .home_hero .links li {
@@ -95,6 +106,16 @@
 
 .home_hero .links svg {
     width: 2rem;
+}
+
+.home_hero .cv {
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .home_hero .cv {
+        margin: unset;
+    }
 }
 
 .home_hero .cv svg {
