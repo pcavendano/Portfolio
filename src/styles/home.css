@@ -27,7 +27,6 @@
 @media screen and (min-width: 1024px) {
     .home_hero figure {
         padding: revert;
-        aspect-ratio: auto/auto;
         overflow: hidden;
         grid-area: figure;
         grid-column: 8 / 12;
@@ -39,7 +38,6 @@
     margin-left: auto;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .home_hero .content {
