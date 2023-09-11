@@ -98,13 +98,6 @@ const Projects = () => {
                                 >
                                     <figure>
                                         <img
-                                            src={vino1800}
-                                            srcSet={`${vino300} 300w, ${vino400} 400w, ${vino900} 900w, ${vino1800} 1800w `}
-                                            alt="vinovino project collage"
-                                            sizes="(max-width:1024px)100vw, 50vw"
-                                            loading="lazy"
-                                        />
-                                        <img
                                             src={mm1800}
                                             srcSet={`${mm300} 300w, ${mm400} 400w, ${mm900} 900w, ${mm1800} 1800w `}
                                             alt="meilleur monde project collage"
