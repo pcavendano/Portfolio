@@ -34,7 +34,7 @@ const Projects = () => {
                 <article>
                     <section className="project_ctn">
                         <header>
-                            <h4 className="visually-hidden">Vinovino</h4>
+                            <h3 className="visually-hidden">Vinovino</h3>
                         </header>
                         <section className="project pair col_1">
                             <div className="project_image">
