@@ -96,7 +96,7 @@ const About = () => {
                 </div>
                 <section className="about" id="about">
                     <header>
-                        <h2>À propos</h2>
+                        <h2><span className="border">À propos</span></h2>
                     </header>
                     <article>
                         <p>
@@ -116,7 +116,7 @@ const About = () => {
                 </section>
                 <section className="skills">
                     <header>
-                        <h2>Savoir&#8208;Faire</h2>
+                        <h2><span className="border">Savoir&#8208;Faire</span> </h2>
                     </header>
                     <article>
                         <h3>Design</h3>
