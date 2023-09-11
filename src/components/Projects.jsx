@@ -61,6 +61,8 @@ const Projects = () => {
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
                                         loading="lazy"
+                                        height={50}
+                                        width={50}
                                     />
                                 </span>
                                 <Ingredient title={"Quessé qu'on mange?"} />
@@ -81,6 +83,8 @@ const Projects = () => {
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
                                         loading="lazy"
+                                        height={50}
+                                        width={50}
                                     />
                                 </span>
                                 <Ingredient
