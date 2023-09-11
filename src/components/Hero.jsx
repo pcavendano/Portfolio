@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import pedro from "../assets/hero_pedro.png";
+import pedro from "../assets/hero_pedro.webp";
 
 const Hero = () => {
     const linkedinRef = useRef(null);
@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <section className="home_hero">
             <figure>
-                <img src={pedro} alt="photo de profil" loading="lazy" />
+                <img src={pedro} alt="photo de profil" width="600" height="800" loading="lazy" />
             </figure>
             <div className="content">
                 <h1>
