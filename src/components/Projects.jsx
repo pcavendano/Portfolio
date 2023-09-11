@@ -6,7 +6,9 @@ import hotsauce from "../assets/hot-sauce.svg";
 
 const Projects = () => {
     return (
-        <section className="home_projects" id="projects">
+        <>
+        <div id="projects"></div>
+        <section className="home_projects">
             <header>
                 <h2>
                     <span className="ghipy">
@@ -95,6 +97,7 @@ const Projects = () => {
                 </section>
             </article>
         </section>
+        </>
     );
 };
 
