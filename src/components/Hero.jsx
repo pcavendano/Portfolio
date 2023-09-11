@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
-import pedro from "../assets/hero_pedro.webp";
+import pedro1200 from "../assets/hero_pedro_1200X1600.webp";
+import pedro800 from "../assets/hero_pedro_800X1067.webp";
+import pedro405 from "../assets/hero_pedro_405x540.webp";
+import pedro200 from "../assets/hero_pedro_200X267.webp";
 
 const Hero = () => {
     const linkedinRef = useRef(null);
@@ -23,7 +26,13 @@ const Hero = () => {
     return (
         <section className="home_hero">
             <figure>
-                <img src={pedro} alt="photo de profil" width="405" height="540" loading="lazy" />
+                <img
+                    src={pedro405}
+                    srcSet={`${pedro200} 200w, ${pedro405} 405w, ${pedro800} 800w, ${pedro1200} 12w `}
+                    alt="photo de profil de pedro contreras avendano"
+                    sizes="(max-width:1024px)100vw, 50vw"
+                    loading="lazy"
+                />
             </figure>
             <div className="content">
                 <h1>
