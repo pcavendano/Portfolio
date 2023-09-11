@@ -22,6 +22,8 @@
 
 .home_hero figure {
     padding: 0 var(--rhythm);
+    background: var(--c-beige);
+	overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
@@ -29,7 +31,7 @@
         padding: revert;
         overflow: hidden;
         grid-area: figure;
-        grid-column: 8 / 12;
+        grid-column: 7 / 12;
         grid-row: 1/5;
     }
 }
@@ -73,7 +75,7 @@
     .home_hero h1 {
         font-size: var(--fs-xl);
         line-height: 1.1;
-        letter-spacing: 2px;
+        letter-spacing: 0px;
         text-align: unset;
     }
 }

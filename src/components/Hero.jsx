@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <section className="home_hero">
             <figure>
-                <img src={pedro} alt="photo de profil" loading="lazy"/>
+                <img src={pedro} alt="photo de profil" loading="lazy" />
             </figure>
             <div className="content">
                 <h1>
@@ -35,7 +35,9 @@ const Hero = () => {
                     Aux Opportunités
                 </h1>
                 <p>
-                    Passionné de cuisine, je construit des produits web interactifs - prêt à m&apos;engager, apprendre, m&apos;adapter et m&apos;améliorer.
+                    Passionné de cuisine, je construit des produits web
+                    interactifs - prêt à m&apos;engager, apprendre,
+                    m&apos;adapter et m&apos;améliorer.
                 </p>
                 <div className="links">
                     <ul>
