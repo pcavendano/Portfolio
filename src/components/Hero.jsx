@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <section className="home_hero">
             <figure>
-                <img src={pedro} alt="photo de profil" width="600" height="800" loading="lazy" />
+                <img src={pedro} alt="photo de profil" width="405" height="540" loading="lazy" />
             </figure>
             <div className="content">
                 <h1>
