@@ -37,6 +37,8 @@ const Navbar = () => {
                                 className="fire"
                                 animationData={fire}
                                 options={defaultOptions}
+                                height={16}
+                                width={16}
                             />
                         </a>
                     </li>
