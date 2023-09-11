@@ -25,10 +25,10 @@ const Navbar = () => {
                 </span>
                 <ul className="menu">
                     <li>
-                        <a className="btn" href="/about">à propos</a>
+                        <a className="btn" href="#about">à propos</a>
                     </li>
                     <li>
-                        <a className="btn" href="/projects">projets</a>
+                        <a className="btn" href="#projects">projets</a>
                     </li>
                     <li>
                         <a className="btn hireme"  href="mailto:pcavendano.dev@gmail.com" target="_blank" rel="noreferrer">

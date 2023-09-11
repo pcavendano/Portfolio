@@ -94,7 +94,7 @@ const About = () => {
                         </defs>
                     </svg>
                 </div>
-                <section className="about">
+                <section className="about" id="about">
                     <header>
                         <h2>À propos</h2>
                     </header>

@@ -6,7 +6,7 @@ import hotsauce from "../assets/hot-sauce.svg";
 
 const Projects = () => {
     return (
-        <section className="home_projects">
+        <section className="home_projects" id="projects">
             <header>
                 <h2>
                     <span className="ghipy">
