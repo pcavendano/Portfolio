@@ -36,7 +36,7 @@ const Projects = () => {
                                 rel="noopener noreferrer"
                             >
                                 <figure>
-                                    <img src={vino} alt="project" />
+                                    <img src={vino} alt="project" loading="lazy"/>
                                 </figure>
                             </a>
                         </div>
@@ -46,6 +46,7 @@ const Projects = () => {
                                 <img
                                     src={hotsauce}
                                     alt="bouteille de sauce piquante"
+                                    loading="lazy"
                                 />
                             </span>
                             <Ingredient title={"Avant de commencer"} />
@@ -65,6 +66,7 @@ const Projects = () => {
                                 <img
                                     src={hotsauce}
                                     alt="bouteille de sauce piquante"
+                                    loading="lazy"
                                 />
                             </span>
                             <Ingredient
@@ -84,6 +86,7 @@ const Projects = () => {
                                     <img
                                         src={mm}
                                         alt="collage de photos du projet meilleur monde"
+                                        loading="lazy"
                                     />
                                 </figure>
                             </a>
