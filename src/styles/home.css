@@ -448,7 +448,12 @@ Projects section
     justify-content: space-between;
 }
 
-.border {
+.border.six {
+    -webkit-text-stroke: 6px var(--c-black);
+}
+
+.border.four{
+    -webkit-text-stroke: 4px var(--c-black);
 }
 
 .home_projects .recette.red {

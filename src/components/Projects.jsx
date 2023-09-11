@@ -27,7 +27,7 @@ const Projects = () => {
                                 className="giphy-embed"
                                 allowFullScreen
                             ></iframe>
-                            <span><span className="border">Mes Projets</span></span>
+                            <span><span className="border six">Mes Projets</span></span>
                         </span>
                     </h2>
                 </header>
@@ -56,7 +56,7 @@ const Projects = () => {
                             </div>
                             <div className="project_info col_2">
                                 <span className="recette">
-                                    <span className="border">Recette</span>
+                                    <span className="border four">Recette</span>
                                     <img
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
@@ -78,7 +78,7 @@ const Projects = () => {
                         <section className="project impair col_2">
                             <div className="project_info red col_1">
                                 <span className="recette red">
-                                <span className="border">Recette</span>
+                                <span className="border four">Recette</span>
                                     <img
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
