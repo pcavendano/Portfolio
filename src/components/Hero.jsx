@@ -28,7 +28,7 @@ const Hero = () => {
             <figure>
                 <img
                     src={pedro405}
-                    srcSet={`${pedro200} 200w, ${pedro405} 405w, ${pedro800} 800w, ${pedro1200} 12w `}
+                    srcSet={`${pedro200} 200w, ${pedro405} 405w, ${pedro800} 800w, ${pedro1200} 1200w `}
                     alt="photo de profil de pedro contreras avendano"
                     sizes="(max-width:1024px)100vw, 50vw"
                     loading="lazy"
