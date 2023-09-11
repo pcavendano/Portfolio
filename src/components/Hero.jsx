@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import pedro1200 from "../assets/hero_pedro_1200x1600.webp";
-import pedro800 from "../assets/hero_pedro_800x1067.webp";
+import pedro679 from "../assets/hero_pedro_679x1067.webp";
 import pedro405 from "../assets/hero_pedro_405x540.webp";
 import pedro200 from "../assets/hero_pedro_200x267.webp";
 
@@ -28,7 +28,7 @@ const Hero = () => {
             <figure>
                 <img
                     src={pedro405}
-                    srcSet={`${pedro200} 200w, ${pedro405} 405w, ${pedro800} 800w, ${pedro1200} 1200w `}
+                    srcSet={`${pedro200} 200w, ${pedro405} 405w, ${pedro679} 679w, ${pedro1200} 1200w `}
                     alt="photo de profil de pedro contreras avendano"
                     sizes="(max-width:1024px)100vw, 50vw"
                 />
