@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import pedro1200 from "../assets/hero_pedro_1200X1600.webp";
-import pedro800 from "../assets/hero_pedro_800X1067.webp";
+import pedro1200 from "../assets/hero_pedro_1200x1600.webp";
+import pedro800 from "../assets/hero_pedro_800x1067.webp";
 import pedro405 from "../assets/hero_pedro_405x540.webp";
-import pedro200 from "../assets/hero_pedro_200X267.webp";
+import pedro200 from "../assets/hero_pedro_200x267.webp";
 
 const Hero = () => {
     const linkedinRef = useRef(null);
