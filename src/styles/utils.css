@@ -9,7 +9,6 @@
 		padding: var(--gutter);
 		max-width: 1980px;
 		position: relative;
-		scroll-behavior: auto; 
 	}
 	
 }
