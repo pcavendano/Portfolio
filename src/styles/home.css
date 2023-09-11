@@ -449,7 +449,6 @@ Projects section
 }
 
 .border {
-    -webkit-text-stroke: 4px var(--c-black);
 }
 
 .home_projects .recette.red {
