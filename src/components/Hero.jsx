@@ -31,6 +31,7 @@ const Hero = () => {
                     srcSet={`${pedro200} 200w, ${pedro450} 450w, ${pedro679} 679w, ${pedro1200} 1200w `}
                     alt="photo de profil de pedro contreras avendano"
                     sizes="(max-width:1024px)100vw, 50vw"
+                    rel="preload"
                 />
             </figure>
             <div className="content">
