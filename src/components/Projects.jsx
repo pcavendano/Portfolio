@@ -49,9 +49,9 @@ const Projects = () => {
                                     loading="lazy"
                                 />
                             </span>
-                            <Ingredient title={"Avant de commencer"} />
-                            <Ingredient title={"Ingrédients"} />
-                            <Ingredient title={"Préparation"} />
+                            <Ingredient title={"Quessé qu'on mange?"} />
+                            <Ingredient title={"Los Ingrédientes"} />
+                            <Ingredient title={"Comment on fait ça?"} />
                         </div>
                     </section>
                 </section>
