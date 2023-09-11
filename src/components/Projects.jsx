@@ -3,10 +3,10 @@ import vino1800 from "../assets/vinovino_1800x2644.webp";
 import vino900 from "../assets/vinovino_900x1322.webp";
 import vino400 from "../assets/vinovino_400x588.webp";
 import vino300 from "../assets/vinovino_300x441.webp";
-import mm1800 from "../assets/mm_1800x2644.webp";
-import mm900 from "../assets/mm_900x1322.webp";
-import mm400 from "../assets/mm_400x588.webp";
-import mm300 from "../assets/mm_300x441.webp";
+import mm1800 from "../assets/mm_1800x2487.webp";
+import mm900 from "../assets/mm_900x1243.webp";
+import mm400 from "../assets/mm_400x553.webp";
+import mm300 from "../assets/mm_300x414.webp";
 import Ingredient from "./Ingredient";
 import hotsauce from "../assets/hot-sauce.svg";
 
