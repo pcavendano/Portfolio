@@ -15,7 +15,7 @@ const Ingredient = (props) => {
 
     return (
         <>
-            <li>
+            <span>
             <div className={`${bg} entete ${props.bg}`} onClick={changeStyle}>
                 <div onClick={changeStyle}>
                     <svg
@@ -45,7 +45,7 @@ const Ingredient = (props) => {
                         however fits you best.</p>
                 </div>
             </div>
-            </li>
+            </span>
         </>
     );
 };

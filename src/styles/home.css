@@ -473,7 +473,7 @@ Projects section
     transform: rotate(45deg);
 }
 
-.home_projects li {
+.home_projects span {
     display: flex;
     flex-direction: column;
     border-bottom: 4px solid var(--c-black);
