@@ -23,7 +23,7 @@
     padding: 0 var(--rhythm);
     background: var(--c-beige);
 	overflow: hidden;
-    border-radius: 5%;
+    border-radius: 25px;
     aspect-ratio: 3/4;
 }
 
@@ -208,7 +208,7 @@
     padding: var(--rhythm);
     position: relative;
     background-color: var(--c-peach);
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 25px 25px 25px 25px;
     color: var(--c-bg);
 }
 
@@ -416,7 +416,7 @@ Projects section
     padding: 4rem var(--rhythm);
     display: flex;
     flex-direction: column;
-    border-radius: 50px;
+    border-radius: 25px;
     margin: var(--rhythm) 0;
 }
 
