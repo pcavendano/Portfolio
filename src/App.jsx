@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Hero, About, Contact, Projects } from "./components";
+import { Navbar, Hero, About, Footer, Projects } from "./components";
 
 
 const App = () => {
@@ -12,9 +12,8 @@ const App = () => {
               <Hero/>
               <About />
               <Projects />
-              <Contact />
             </main>
-            <section className="site-footer"></section>
+            <Footer />
           </div>
         </div>
     );
