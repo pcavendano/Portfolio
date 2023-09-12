@@ -9,6 +9,7 @@ import mm400 from "../assets/mm_400x553.webp";
 import mm300 from "../assets/mm_300x414.webp";
 import Ingredient from "./Ingredient";
 import hotsauce from "../assets/hot-sauce.svg";
+import data from "../assets/data/data.json";
 
 const Projects = () => {
     return (
@@ -27,7 +28,9 @@ const Projects = () => {
                                 className="giphy-embed"
                                 allowFullScreen
                             ></iframe>
-                            <span><span className="border six">Mes Projets</span></span>
+                            <span>
+                                <span className="border six">Mes Projets</span>
+                            </span>
                         </span>
                     </h2>
                 </header>
@@ -65,9 +68,18 @@ const Projects = () => {
                                         width={50}
                                     />
                                 </span>
-                                <Ingredient title={"Quessé qu'on mange?"} />
-                                <Ingredient title={"Los Ingrédientes"} />
-                                <Ingredient title={"Comment on fait ça?"} />
+                                <Ingredient
+                                    data={data.vinovino.projectDescription}
+                                    title={"Quessé qu'on mange?"}
+                                />
+                                <Ingredient
+                                    data={data.vinovino.projectIngridients}
+                                    title={"Los Ingrédientes"}
+                                />
+                                <Ingredient
+                                    data={data.vinovino.projectProcedure}
+                                    title={"Comment on fait ça?"}
+                                />
                             </div>
                         </section>
                     </section>
@@ -78,7 +90,7 @@ const Projects = () => {
                         <section className="project impair col_2">
                             <div className="project_info red col_1">
                                 <span className="recette red">
-                                <span className="border four">Recette</span>
+                                    <span className="border four">Recette</span>
                                     <img
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
@@ -88,11 +100,20 @@ const Projects = () => {
                                     />
                                 </span>
                                 <Ingredient
+                                    data={data.mm.projectDescription}
                                     title={"Avant de commencer"}
                                     bg={"red"}
                                 />
-                                <Ingredient title={"Ingrédients"} bg={"red"} />
-                                <Ingredient title={"Préparation"} bg={"red"} />
+                                <Ingredient
+                                    data={data.mm.projectIngridients}
+                                    title={"Ingrédients"}
+                                    bg={"red"}
+                                />
+                                <Ingredient
+                                    data={data.mm.projectProcedure}
+                                    title={"Préparation"}
+                                    bg={"red"}
+                                />
                             </div>
                             <div className="project_image">
                                 <a
