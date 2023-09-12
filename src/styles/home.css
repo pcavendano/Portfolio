@@ -312,6 +312,10 @@
     padding-bottom: var(--gutter);
 }
 
+.home_about aside div li a {
+    cursor: pointer;
+}
+
 .home_about aside img{
     width: 50px;
     display: inline-block;

@@ -16,6 +16,7 @@ import intellij from "../assets/icons/intellij.svg";
 import eclipse from "../assets/icons/eclipse.svg";
 import androidstudio from "../assets/icons/androidstudio.svg";
 import wordpress from "../assets/icons/wordpress.svg";
+import kirby from "../assets/icons/kirby.svg";
 
 const About = () => {
     useEffect(() => {
@@ -212,34 +213,82 @@ const About = () => {
                                     </div>
                                 </li>
                                 <li>
-                                <div>Frameworks: </div>
+                                    <div>Frameworks: </div>
                                     <div>
-                                    <img src={react} alt="react icon" />
-                                    <img src={angular} alt="Angular icon" />
-                                    <img src={laravel} alt="Laravel icon" />
-                                    <img src={wordpress} alt="Wordpress icon" />
-                                    <img
-                                        src={materialui}
-                                        alt="Material UI icon"
-                                    />
+                                        <a href="https://getkirby.com/">
+                                            <img src={kirby} alt="Kirby icon" />
+                                        </a>
+                                        <a href="https://angular.io/">
+                                            <img
+                                                src={angular}
+                                                alt="Angular icon"
+                                            />
+                                        </a>
+                                        <a href="https://laravel.com/">
+                                            <img
+                                                src={laravel}
+                                                alt="Laravel icon"
+                                            />
+                                        </a>
+                                        <a href="https://wordpress.com/fr/">
+                                            <img
+                                                src={wordpress}
+                                                alt="Wordpress icon"
+                                            />
+                                        </a>
+                                        <a href="https://react.dev/">
+                                            <img src={react} alt="react icon" />
+                                        </a>
+                                        <a href="https://material.angular.io/">
+                                            <img
+                                                src={materialui}
+                                                alt="Material UI icon"
+                                            />
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
-                                <div>Outils: </div>
+                                    <div>Outils: </div>
                                     <div>
-                                    <img src={github} alt="github icon" />
-                                    <img src={docker} alt="docker icon" />
-                                    <img src={figma} alt="figma icon" />
-                                    <img src={vscode} alt="vscode icon" />
-                                    <img src={intellij} alt="intellij icon" />
-                                    <img
-                                        src={eclipse}
-                                        alt="eclipse studio icon"
-                                    />
-                                    <img
-                                        src={androidstudio}
-                                        alt="android studio icon"
-                                    />
+                                        <a href="https://www.figma.com/">
+                                            <img src={figma} alt="figma icon" />
+                                        </a>
+                                        <a href="https://www.docker.com/">
+                                            <img
+                                                src={docker}
+                                                alt="docker icon"
+                                            />
+                                        </a>
+                                        <a href="https://www.jetbrains.com/fr-fr/phpstorm/">
+                                            <img
+                                                src={intellij}
+                                                alt="intellij icon"
+                                            />
+                                        </a>
+                                        <a href="https://github.com/pcavendano">
+                                            <img
+                                                src={github}
+                                                alt="github icon"
+                                            />
+                                        </a>
+                                        <a href="https://code.visualstudio.com/">
+                                            <img
+                                                src={vscode}
+                                                alt="vscode icon"
+                                            />
+                                        </a>
+                                        <a href="https://www.eclipse.org/downloads/">
+                                            <img
+                                                src={eclipse}
+                                                alt="eclipse studio icon"
+                                            />
+                                        </a>
+                                        <a href="https://developer.android.com/">
+                                            <img
+                                                src={androidstudio}
+                                                alt="android studio icon"
+                                            />
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
