@@ -2,25 +2,28 @@ import React, { useEffect } from "react";
 
 const About = () => {
     useEffect(() => {
-        
         const elementIsVisibleInViewport = (el, partiallyVisible = true) => {
             const { top, left, bottom, right } = el.getBoundingClientRect();
             const { innerHeight, innerWidth } = window;
             return partiallyVisible
-            ? ((top > 0 && top < innerHeight) ||
-            (bottom > 0 && bottom < innerHeight)) &&
-            ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
-            : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
-        };
-        
-        // find the collection of elements with the class name 'my-text'
-        window.onscroll = function () {
-            elementIsVisibleInViewport(document.querySelector('.ellipse svg'))
-            const ellipse = document.getElementsByClassName("ellipse");
-            let scrollX = (document.documentElement.scrollTop/10) * .15 + -10;
-            ellipse[0].style.transform = "translate(" + scrollX + "%)";
+                ? ((top > 0 && top < innerHeight) ||
+                      (bottom > 0 && bottom < innerHeight)) &&
+                      ((left > 0 && left < innerWidth) ||
+                          (right > 0 && right < innerWidth))
+                : top >= 0 &&
+                      left >= 0 &&
+                      bottom <= innerHeight &&
+                      right <= innerWidth;
         };
 
+        // find the collection of elements with the class name 'my-text'
+        window.onscroll = function () {
+            elementIsVisibleInViewport(document.querySelector(".ellipse svg"));
+            const ellipse = document.getElementsByClassName("ellipse");
+            let scrollX =
+                (document.documentElement.scrollTop / 10) * 0.15 + -10;
+            ellipse[0].style.transform = "translate(" + scrollX + "%)";
+        };
     }, []);
     return (
         <section className="home_about">
@@ -96,61 +99,86 @@ const About = () => {
                 </div>
                 <section className="about" id="about">
                     <header>
-                        <h2><span className="border six">À propos</span></h2>
+                        <h2>
+                            <span className="border six">À propos</span>
+                        </h2>
                     </header>
                     <article>
                         <p>
-                            👋 I&apos;m Pedro, an aspiring Full Stack Developer
-                            with strong Front-End knowledge. <br /> <br /> My passion for
-                            fixing and understanding the inner-workings of
-                            electronics, appliances, automobiles and anything
-                            engineered compelled me to return to school and
-                            become a full stack developer. I like to think of
-                            myself as someone who is responsable, cooperative,
-                            curious and always looking to learn. I am ready to
-                            bring my analytical and problem-solving 🛠️ abilities
-                            to the digital world, alongside other like-minded
-                            repairers, improvers and creators.
+                            👋 Je suis Pedro, un aspirant développeur Full Stack
+                            avec des fortes connaissances en Front-End. <br />
+                            <br /> Ma passion pour la réparation, la
+                            compréhension du fonctionnement interne des
+                            appareils électroniques et des automobiles m&apos;a
+                            poussé à retourner à l&apos;école et à devenir
+                            développeur Full Stack. Je me considére comme
+                            quelqu&apos;un de responsable, coopératif, curieux
+                            et toujours en quête d&apos;apprentissage. Je suis
+                            prêt à apporter mes compétences analytiques et de
+                            résolution de problèmes 🛠️ dans le monde numérique,
+                            aux côtés d&apos;autres passionnés de la réparation
+                            et de la création.
                         </p>
                     </article>
                 </section>
                 <section className="skills">
                     <header>
-                        <h2><span className="border six">Savoir&#8208;Faire</span> </h2>
+                        <h2>
+                            <span className="border six">
+                                Savoir&#8208;Faire
+                            </span>{" "}
+                        </h2>
                     </header>
                     <article>
-                        <h3>Design</h3>
-                        <p>
-                            My current education is mainly focused on creating
-                            and programming web interfaces using React, Angular,
-                            and a Laravel backend. However, during my college
-                            studies (DEC), I also learned Object-Oriented
-                            Programming (OOP) in Java, algorithms in Python, and
-                            creating Windows applications using C#.
-                        </p>
-                        <br />
-                        <p>
-                            At my future employer, I would like to primarily
-                            focus on web interface development using
-                            technologies like React, Angular, and Vue.js. This
-                            is where I can continue enhancing my knowledge in
-                            UX/UI and CSS.
-                        </p>
-                        <br />
-                        <p>
-                            Nonetheless, I consider myself a generalist capable
-                            of working across the entire stack. I have a
-                            particular interest in CI/CD, Docker, server/machine
-                            management, and setting up development tools. I am
-                            also interested in learning more about cloud
-                            computing and machine learning.
-                        </p>
-                        <br />
-                        <p>
-                            I look forward to being a part of a dynamic team and
-                            to contribute and collaborate on interesting
-                            projects for the long term.
-                        </p>
+                        <section>
+                            <h3>Présent</h3>
+                            <p>
+                                Mon éducation actuelle est principalement axée
+                                sur le design et développement de produits web.
+                                Je suis capable de créer des interfaces web en
+                                utilisant des outils de maquettage tels que
+                                Figma et les convertir en code fonctionnel en
+                                utilisant React, Angular, Javascript Vanille et
+                                une infrastructure backend en PHP ou Laravel.
+                                Cependant, lors de mes études collégiales (DEC),
+                                j&apos;ai également appris la Programmation
+                                Orientée Objet (POO) en Java, les algorithmes en
+                                Python, et la création d&apos;applications
+                                Windows en utilisant C#.
+                            </p>
+                            <br />
+                        </section>
+                        <section>
+                            <h3>Futur</h3>
+                            <p>
+                                Chez mon futur employeur, je souhaite
+                                principalement me spécialiser dans le
+                                développement d&apos;interfaces web en utilisant
+                                une variété de technologies, notamment React,
+                                Angular, Vue.js, ou même JavaScript pur. De
+                                cette façon, je pourrai continuer à enrichir mes
+                                compétences en UX/UI et en CSS.
+                            </p>
+                            <br />
+                            <p>
+                                Cependant, je me considère un généraliste
+                                capable de travailler sur l&apos;ensemble de la
+                                pile technologique. J&apos;ai un intérêt
+                                particulier pour CI/CD, la virtualisation avec
+                                Docker, la gestion des serveurs/machines et la
+                                configuration d&apos;outils de développement. Je
+                                suis également intéressé à en apprendre
+                                davantage sur Microsoft .Net et les technologies
+                                côté serveur.
+                            </p>
+                            <br />
+                            <p>
+                                J&apos;ai hâte de rejoindre une équipe dynamique
+                                et de collaborer sur des projets intéressants à
+                                long terme.
+                            </p>
+                        </section>
+
                     </article>
                 </section>
             </div>

@@ -44,8 +44,8 @@ const Hero = () => {
                     Aux Opportunités
                 </h1>
                 <p>
-                    Passionné de cuisine, je construit des produits web
-                    interactifs - prêt à m&apos;engager, apprendre,
+                    Passionné de cuisine, je construis des produits web
+                    interactifs - prêt à apprendre, m&apos;engager,
                     m&apos;adapter et m&apos;améliorer.
                 </p>
                 <div className="links">
