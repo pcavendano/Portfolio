@@ -320,7 +320,7 @@
 }
 
 .home_about aside img{
-    width: var(--fs-l);
+    width: var(--fs-xl);
     display: inline-block;
     padding-right: 1rem;
 }
@@ -366,7 +366,7 @@ Projects section
 }
 
 .home_projects header {
-    margin: calc(var(--rhythm) * 3) 0;
+    margin: calc(var(--rhythm) * 2) 0;
     padding: 0 var(--rhythm);
 }
 
