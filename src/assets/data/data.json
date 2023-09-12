@@ -1,0 +1,12 @@
+{
+    "mm": {
+        "projectDescription": "Pendant mon stage chez Calotte, l&apos;un de mes mandats consistait à travailler sur la refonte du site MeilleurMonde. Sous la supervision de Vincent, j&apos;ai activement contribué à la création du site en utilisant Kirby CMS, qui est basé sur PHP, en plus d&apos;utiliser CSS et JavaScript pur pour le développement.",
+        "projectIngridients": "Kirby Cms, CSS, JavaScript",
+        "projectProcedure": "Unas cucharita"
+    },
+    "vinovino": {
+        "projectDescription": "Pendant mon stage chez Vinovino, l&apos;un de mes mandats consistait à travailler sur la refonte du site MeilleurMonde. Sous la supervision de Vincent, j&apos;ai activement contribué à la création du site en utilisant Kirby CMS, qui est basé sur PHP, en plus d&apos;utiliser CSS et JavaScript pur pour le développement.",
+        "projectIngridients": "Angular, MaterialUI, Laravel, Digital Ocean, MySQL",
+        "projectProcedure": "Una cucharita"
+    }
+}
