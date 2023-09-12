@@ -178,7 +178,61 @@ const About = () => {
                                 long terme.
                             </p>
                         </section>
-
+                        <aside>
+                            <h3>Ce que j&apos;utilise</h3>
+                            <ul>
+                                <li>
+                                    <span className="title">Langages: </span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>PHP</span>
+                                    <span>SQL</span>
+                                </li>
+                                <li>
+                                    <span>Frameworks: </span>
+                                    <span>React</span>
+                                    <span>Angular</span>
+                                    <span>Laravel</span>
+                                    <span>Material UI</span>
+                                </li>
+                                <li>
+                                    <span>Outils: </span>
+                                    <span>Git</span>
+                                    <span>Docker</span>
+                                    <span>Figma</span>
+                                    <span>Visual Studio Code</span>
+                                    <span>IntelliJ</span>
+                                    <span>Eclipse</span>
+                                    <span>Android Studio</span>
+                                </li>
+                                <li>
+                                    <span>Méthodologies: </span>
+                                    <span>Agile</span>
+                                    <span>Scrum</span>
+                                    <span>Kanban</span>
+                                </li>
+                                <li>
+                                    <span>Systèmes d&apos;exploitation: </span>
+                                    <span>Windows</span>
+                                    <span>Linux</span>
+                                    <span>MacOS</span>
+                                </li>
+                                <li>
+                                    <span>Serveurs: </span>
+                                    <span>Apache</span>
+                                    <span>Nginx</span>
+                                </li>
+                                <li>
+                                    <span>Autres: </span>
+                                    <span>REST</span>
+                                    <span>Webpack</span>
+                                    <span>npm</span>
+                                    <span>Yarn</span>
+                                    <span>Composer</span>
+                                </li>
+                            </ul>
+                        </aside>
                     </article>
                 </section>
             </div>
