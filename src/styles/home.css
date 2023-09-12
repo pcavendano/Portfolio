@@ -581,9 +581,14 @@ Projects section
     background-color: var(--c-yellow);
 }
 
+.home_projects .red .bg {
+    background-color: var(--c-yellow);
+}
+
 .home_projects .bg {
     background-color: var(--c-red);
 }
+
 
 .home_projects .entete {
     display: inline-flex;
