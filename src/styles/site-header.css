@@ -50,11 +50,13 @@
     font-family: var(--ff-serif);
     justify-self: end;
     padding-left: var(--inner);
+    max-width: 18ch;
 }
 
 @media screen and (min-width: 1024px) {
     .site-header .profession {
         justify-self: start;
+        max-width: 30ch;
     }
 }
 
