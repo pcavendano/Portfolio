@@ -197,7 +197,7 @@ const About = () => {
                             </p>
                         </section>
                         <aside>
-                            <h3>Ce que j&apos;utilise</h3>
+                            <h3>Technologies Utilisées</h3>
                             <ul>
                                 <li>
                                     <div>Langages: </div>
