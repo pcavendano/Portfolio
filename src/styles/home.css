@@ -320,7 +320,7 @@
 }
 
 .home_about aside img{
-    width: var(--fs-xl);
+    width: var(--fs-2xl);
     display: inline-block;
     padding-right: 1rem;
 }
