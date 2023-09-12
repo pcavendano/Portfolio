@@ -303,13 +303,16 @@
 }
 
 .home_about aside li {
-    margin-right: var(--inner);
+    margin: var(--inner) var(--inner) var(--inner) 0;
+    padding: var(--gutter);
+    border-radius: 25px;
+    background-color: var(--c-white);
 }
 
 .home_about aside div {
     color: var(--c-red);
     font-size: var(--fs-l);
-    padding-bottom: var(--gutter);
+    padding: var(--gutter);
 }
 
 .home_about aside div li a {
@@ -317,11 +320,17 @@
 }
 
 .home_about aside img{
-    width: 50px;
+    width: var(--fs-l);
     display: inline-block;
     padding-right: 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+    .home_about aside img {
+        width: var(--fs-2xl);
+        padding-right: 1.5rem;
+    }
+}
 
 .home_about h2 {
     font-size: var(--fs-2xl);
@@ -363,7 +372,7 @@ Projects section
 
 @media screen and (min-width: 1024px) {
     .home_projects header {
-        margin: calc(var(--rhythm) * 3) 0;
+        margin: calc(var(--rhythm) * 2) 0;
         padding: 0 4rem;
     }
 }
