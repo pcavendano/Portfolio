@@ -21,7 +21,7 @@
 .home_hero figure {
     padding: 0 var(--rhythm);
     background: var(--c-beige);
-	overflow: hidden;
+    overflow: hidden;
     border-radius: 25px;
     aspect-ratio: 3/4;
 }
@@ -36,7 +36,7 @@
         margin: auto 0 auto auto;
         height: 90%;
         grid-row-start: 1;
-        grid-row-end:2;
+        grid-row-end: 2;
         position: relative;
         isolation: isolate;
     }
@@ -44,11 +44,11 @@
 
 @media screen and (min-width: 1024px) {
     .home_hero figure::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
         background-color: var(--c-fg);
-        opacity: .3;
+        opacity: 0.3;
     }
 }
 
@@ -142,6 +142,13 @@
     margin: auto;
 }
 
+.home_hero .cv a {
+    min-width: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
 @media screen and (min-width: 1024px) {
     .home_hero .cv {
         margin: unset;
@@ -311,6 +318,7 @@
 .home_about aside div {
     color: var(--c-red);
     font-size: var(--fs-l);
+    font-weight: 700;
     padding: var(--gutter);
 }
 
@@ -318,7 +326,7 @@
     cursor: pointer;
 }
 
-.home_about aside img{
+.home_about aside img {
     width: var(--fs-2xl);
     display: inline-block;
     padding-right: 1rem;
@@ -403,7 +411,7 @@ Projects section
 @media screen and (min-width: 1024px) {
     .home_projects .ghipy {
         flex-direction: row;
-    }   
+    }
 }
 
 .home_projects .ghipy iframe {
@@ -416,7 +424,7 @@ Projects section
 @media screen and (min-width: 1024px) {
     .home_projects .ghipy iframe {
         height: var(--fs-3xl);
-    }   
+    }
 }
 
 .home_projects .project_ctn {
@@ -513,7 +521,7 @@ Projects section
     -webkit-text-stroke: 4px var(--c-black);
 }
 
-.border.four{
+.border.four {
     -webkit-text-stroke: 2px var(--c-black);
 }
 
