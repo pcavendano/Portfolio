@@ -292,8 +292,14 @@
 
 .home_about aside ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    .home_about aside ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .home_about aside li {
@@ -302,7 +308,7 @@
 
 .home_about aside div {
     color: var(--c-red);
-    font-size: var(--fs-m);
+    font-size: var(--fs-l);
     padding-bottom: var(--gutter);
 }
 
