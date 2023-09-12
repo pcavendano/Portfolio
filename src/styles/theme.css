@@ -242,7 +242,7 @@
     --ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
         monospace;
     font-family: var(--ff-sans);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     background: var(--c-fg);
     color: var(--c-peach);
