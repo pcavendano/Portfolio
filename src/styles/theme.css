@@ -246,8 +246,8 @@
     font-weight: 400;
     background: var(--c-fg);
     color: var(--c-peach);
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
+    line-height: 1.33337;
+    letter-spacing: -.01em;
 
     --fs-xs: 0.55rem;
     --fs-s: 0.75rem;
