@@ -418,7 +418,7 @@ Projects section
     display: inline-block;
     border: 2px solid var(--c-black);
     margin-right: var(--inner);
-    height: var(--fs-4xl);
+    height: var(--fs-3xl);
 }
 
 @media screen and (min-width: 1024px) {
