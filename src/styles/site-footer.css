@@ -29,10 +29,23 @@
 }
 
 .site-footer ul li a * {
-    display: inline-block;
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .site-footer ul li a * {
+        display: inline-block;
+    }
 }
 
 .site-footer p {
-    display: inline-block;
-    line-height: 1.33337px;
+    max-width: 28ch;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .site-footer p {
+        display: inline-block;
+        line-height: 1.33337px;
+    }   
 }
