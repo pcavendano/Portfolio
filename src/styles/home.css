@@ -290,6 +290,29 @@
     }
 }
 
+.home_about aside ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home_about aside li {
+    margin-right: var(--inner);
+}
+
+.home_about aside div {
+    color: var(--c-red);
+    font-size: var(--fs-m);
+    padding-bottom: var(--gutter);
+}
+
+.home_about aside img{
+    width: 50px;
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+
 .home_about h2 {
     font-size: var(--fs-2xl);
     display: inline-block;

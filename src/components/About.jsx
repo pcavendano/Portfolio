@@ -1,4 +1,21 @@
 import React, { useEffect } from "react";
+import html5 from "../assets/icons/html5.svg";
+import css from "../assets/icons/css.svg";
+import javascript from "../assets/icons/javascript.svg";
+import php from "../assets/icons/php.svg";
+import sql from "../assets/icons/mysql.svg";
+import react from "../assets/icons/react.svg";
+import angular from "../assets/icons/angular.svg";
+import laravel from "../assets/icons/laravel.svg";
+import materialui from "../assets/icons/material.svg";
+import github from "../assets/icons/github.svg";
+import docker from "../assets/icons/docker.svg";
+import figma from "../assets/icons/figma.svg";
+import vscode from "../assets/icons/vscode.svg";
+import intellij from "../assets/icons/intellij.svg";
+import eclipse from "../assets/icons/eclipse.svg";
+import androidstudio from "../assets/icons/androidstudio.svg";
+import wordpress from "../assets/icons/wordpress.svg";
 
 const About = () => {
     useEffect(() => {
@@ -182,54 +199,48 @@ const About = () => {
                             <h3>Ce que j&apos;utilise</h3>
                             <ul>
                                 <li>
-                                    <span className="title">Langages: </span>
-                                    <span>HTML5</span>
-                                    <span>CSS3</span>
-                                    <span>JavaScript</span>
-                                    <span>PHP</span>
-                                    <span>SQL</span>
+                                    <div>Langages: </div>
+                                    <div>
+                                        <img src={html5} alt="html5 icon" />
+                                        <img src={css} alt="css icon" />
+                                        <img
+                                            src={javascript}
+                                            alt="javascript icon"
+                                        />
+                                        <img src={php} alt="php icon" />
+                                        <img src={sql} alt="sql icon" />
+                                    </div>
                                 </li>
                                 <li>
-                                    <span>Frameworks: </span>
-                                    <span>React</span>
-                                    <span>Angular</span>
-                                    <span>Laravel</span>
-                                    <span>Material UI</span>
+                                <div>Frameworks: </div>
+                                    <div>
+                                    <img src={react} alt="react icon" />
+                                    <img src={angular} alt="Angular icon" />
+                                    <img src={laravel} alt="Laravel icon" />
+                                    <img src={wordpress} alt="Wordpress icon" />
+                                    <img
+                                        src={materialui}
+                                        alt="Material UI icon"
+                                    />
+                                    </div>
                                 </li>
                                 <li>
-                                    <span>Outils: </span>
-                                    <span>Git</span>
-                                    <span>Docker</span>
-                                    <span>Figma</span>
-                                    <span>Visual Studio Code</span>
-                                    <span>IntelliJ</span>
-                                    <span>Eclipse</span>
-                                    <span>Android Studio</span>
-                                </li>
-                                <li>
-                                    <span>Méthodologies: </span>
-                                    <span>Agile</span>
-                                    <span>Scrum</span>
-                                    <span>Kanban</span>
-                                </li>
-                                <li>
-                                    <span>Systèmes d&apos;exploitation: </span>
-                                    <span>Windows</span>
-                                    <span>Linux</span>
-                                    <span>MacOS</span>
-                                </li>
-                                <li>
-                                    <span>Serveurs: </span>
-                                    <span>Apache</span>
-                                    <span>Nginx</span>
-                                </li>
-                                <li>
-                                    <span>Autres: </span>
-                                    <span>REST</span>
-                                    <span>Webpack</span>
-                                    <span>npm</span>
-                                    <span>Yarn</span>
-                                    <span>Composer</span>
+                                <div>Outils: </div>
+                                    <div>
+                                    <img src={github} alt="github icon" />
+                                    <img src={docker} alt="docker icon" />
+                                    <img src={figma} alt="figma icon" />
+                                    <img src={vscode} alt="vscode icon" />
+                                    <img src={intellij} alt="intellij icon" />
+                                    <img
+                                        src={eclipse}
+                                        alt="eclipse studio icon"
+                                    />
+                                    <img
+                                        src={androidstudio}
+                                        alt="android studio icon"
+                                    />
+                                    </div>
                                 </li>
                             </ul>
                         </aside>
