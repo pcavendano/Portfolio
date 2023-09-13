@@ -160,9 +160,9 @@ const About = () => {
                                 une infrastructure backend en PHP ou Laravel.
                                 Cependant, lors de mes études collégiales (DEC),
                                 j&apos;ai également appris la Programmation
-                                Orientée Objet (POO) en Java, les algorithmes en
-                                Python, et la création d&apos;applications
-                                Windows en utilisant C#.
+                                Orientée Objet (POO) et les patrons de conceptio avec Java, les algorithmes en
+                                Python, la création d&apos;applications
+                                Desktop avec .NET et ASP.NET Core pour les applications web.
                             </p>
                             <br />
                         </section>
