@@ -59,7 +59,7 @@ const Projects = () => {
                             </div>
                             <div className="project_info col_2">
                                 <span className="recette">
-                                    <span className="border four">Recette</span>
+                                    <span className="border four">Vinovino</span>
                                     <img
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
@@ -70,11 +70,11 @@ const Projects = () => {
                                 </span>
                                 <Ingredient
                                     data={data.vinovino.projectDescription}
-                                    title={"Quessé qu'on mange?"}
+                                    title={"Qu'est-ce que c'est?"}
                                 />
                                 <Ingredient
                                     data={data.vinovino.projectIngridients}
-                                    title={"Los Ingrédientes"}
+                                    title={"Avec quoi on fait ça?"}
                                 />
                                 <Ingredient
                                     data={data.vinovino.projectProcedure}
@@ -90,7 +90,7 @@ const Projects = () => {
                         <section className="project impair col_2">
                             <div className="project_info red col_1">
                                 <span className="recette red">
-                                    <span className="border four">Recette</span>
+                                    <span className="border four">Meilleur Monde</span>
                                     <img
                                         src={hotsauce}
                                         alt="bouteille de sauce piquante"
