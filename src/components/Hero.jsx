@@ -10,7 +10,7 @@ const Hero = () => {
     // Function will execute on click of button
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch("CV_Pedro_v2.pdf").then((response) => {
+        fetch("PCONTRERAS_CV_FR.pdf").then((response) => {
             response.blob().then((blob) => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
@@ -45,8 +45,8 @@ const Hero = () => {
                 </h1>
                 <p>
                     Passionné de cuisine, je construis des produits web
-                    interactifs - prêt à apprendre, m&apos;engager,
-                    m&apos;adapter et m&apos;améliorer.
+                    interactifs - prêt à apprendre, m&apos;engager et
+                    m&apos;adapter.
                 </p>
                 <div className="links">
                     <ul>
