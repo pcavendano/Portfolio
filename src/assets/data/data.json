@@ -5,8 +5,8 @@
         "projectProcedure": "Unas cucharita"
     },
     "vinovino": {
-        "projectDescription": "Pendant mon stage chez Vinovino, l&apos;un de mes mandats consistait à travailler sur la refonte du site MeilleurMonde. Sous la supervision de Vincent, j&apos;ai activement contribué à la création du site en utilisant Kirby CMS, qui est basé sur PHP, en plus d&apos;utiliser CSS et JavaScript pur pour le développement.",
-        "projectIngridients": "Angular, MaterialUI, Laravel, Digital Ocean, MySQL",
-        "projectProcedure": "Una cucharita"
+        "projectDescription": "Pour mon projet de fin d'études, nous avons crée une App de gestion de bouteilles de vin. Elle permet d'trouver une bouteille, en faisant une recherche ou en utilisant le scanner, sur toutes les bouteilles de la SAQ  .",
+        "projectIngridients": "Angular, Angular, CSS, MaterialUI, Laravel, GitHub Actions, Digital Ocean et MySQL",
+        "projectProcedure": "Pour ma part, j'ai travaillé sur la fonctionalité du scanner de code barres de l'application, un WebCrawler pour importer les données des bouteilles du site de la SAQ. J,ai aussi travaillé sur la configuration des serveurs et le déploiement."
     }
 }

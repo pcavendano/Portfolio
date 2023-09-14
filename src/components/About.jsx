@@ -160,7 +160,7 @@ const About = () => {
                                 Pour le backend, j&apos;ai de l&apos;expérience avec <b>PHP</b> et <b>MySQL</b> en utilisant <b>Wordpress</b> et <b>Kirby</b> comme CMS, ainsi que <b>Laravel</b> (MVC et REST API).
                                 Lors de mes études collégiales (DEC),
                                 j&apos;ai également appris la Programmation
-                                Orientée Objet (POO) et les patrons de conceptio avec Java, les algorithmes en
+                                Orientée Objet (POO) et les patrons de conception avec Java, les algorithmes en
                                 Python et la création d&apos;applications desktop avec <b>Microsoft .NET</b>.
                             </p>
                             <br />
