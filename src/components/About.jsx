@@ -152,18 +152,16 @@ const About = () => {
                         <section>
                             <h3>Présent</h3>
                             <p>
-                                Mon éducation actuelle est principalement axée
+                                Mes compétences actuelles sont axées
                                 sur le design et développement d&apos;interfaces web.
-                                Je suis capable de créer des interfaces web en
-                                utilisant des outils de maquettage tels que
-                                Figma et les convertir en code fonctionnel en
-                                utilisant React, Angular ou Javascript pur et
-                                une infrastructure backend en Laravel (MVC et REST API).
-                                Cependant, lors de mes études collégiales (DEC),
+                                J'ai de l'expérience dans la création d'interfaces web en
+                                utilisant des outils de maquettage tels que <b>Figma</b> et en les convertissant en code fonctionnel en
+                                utilisant <b>React</b>, <b>Angular</b> ou <b>Javascript</b> pur.
+                                Pour le backend, j&apos;ai de l&apos;expérience avec <b>PHP</b> et <b>MySQL</b> en utilisant <b>Wordpress</b> et <b>Kirby</b> comme CMS, ainsi que <b>Laravel</b> (MVC et REST API).
+                                Lors de mes études collégiales (DEC),
                                 j&apos;ai également appris la Programmation
                                 Orientée Objet (POO) et les patrons de conceptio avec Java, les algorithmes en
-                                Python, la création d&apos;applications
-                                Desktop avec .NET et ASP.NET Core pour les applications web.
+                                Python et la création d&apos;applications desktop avec <b>Microsoft .NET</b>.
                             </p>
                             <br />
                         </section>
@@ -171,30 +169,26 @@ const About = () => {
                             <h3>Futur</h3>
                             <p>
                                 Chez mon futur employeur, je souhaite
-                                principalement me spécialiser dans le
-                                développement d&apos;interfaces web en utilisant
-                                une variété de technologies, notamment React,
-                                Angular, Vue.js, ou même JavaScript pur. De
-                                cette façon, je pourrai continuer à enrichir mes
-                                compétences en UX/UI et en CSS.
+                                me spécialiser dans le
+                                développement d&apos;interfaces web pour
+                                pouvoir continuer à enrichir mes
+                                compétences en UX/UI et CSS.
                             </p>
                             <br />
                             <p>
                                 Cependant, je me considère un généraliste
                                 capable de travailler sur l&apos;ensemble de la
                                 pile technologique. J&apos;ai un intérêt
-                                particulier pour CI/CD, la virtualisation avec
-                                Docker, la gestion des serveurs/machines et la
+                                particulier pour <b>CI/CD</b>, la virtualisation avec
+                                <b>Docker</b>, la gestion des serveurs/machines et la
                                 configuration d&apos;outils de développement. Je
-                                suis également intéressé à en apprendre
-                                davantage sur Microsoft .Net et les technologies
+                                suis également intéressé à apprendre
+                                davantage sur <b>ASP.Net Core</b> et les technologies
                                 côté serveur.
                             </p>
                             <br />
                             <p>
-                                J&apos;ai hâte de rejoindre une équipe dynamique
-                                et de collaborer sur des projets intéressants à
-                                long terme.
+                            Je suis vraiment  🤩 enthousiaste à l'idée de rejoindre une équipe 🚀 ultra-dynamique et de plonger 🏊‍♂️ tête la première dans des projets captivants qui nous porteront vers un avenir ✨ brillant.
                             </p>
                         </section>
                         <aside>
@@ -240,10 +234,10 @@ const About = () => {
                                         <a href="https://react.dev/">
                                             <img src={react} alt="react icon" />
                                         </a>
-                                        <a href="https://material.angular.io/">
+                                        <a href="https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet-core/">
                                             <img
-                                                src={materialui}
-                                                alt="Material UI icon"
+                                                src={dotnet}
+                                                alt="microsoft dotnet icon"
                                             />
                                         </a>
                                     </div>
@@ -276,24 +270,6 @@ const About = () => {
                                             <img
                                                 src={vscode}
                                                 alt="vscode icon"
-                                            />
-                                        </a>
-                                        <a href="https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet-core/">
-                                            <img
-                                                src={dotnet}
-                                                alt="microsoft dotnet icon"
-                                            />
-                                        </a>
-                                        <a href="https://www.eclipse.org/downloads/">
-                                            <img
-                                                src={eclipse}
-                                                alt="eclipse studio icon"
-                                            />
-                                        </a>
-                                        <a href="https://developer.android.com/">
-                                            <img
-                                                src={androidstudio}
-                                                alt="android studio icon"
                                             />
                                         </a>
                                     </div>
