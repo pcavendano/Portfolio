@@ -129,8 +129,7 @@ const About = () => {
                             <br /> Ma passion pour la réparation, la
                             compréhension du fonctionnement interne des
                             appareils électroniques et des automobiles m&apos;a
-                            poussé à retourner à l&apos;école et à devenir
-                            développeur web Full-Stack. Je me considére comme
+                            poussé à réorienter ma trajectoire, vers une carrière de Développeur Web Full-Stack. Je me considére comme
                             quelqu&apos;un de responsable, coopératif, curieux
                             et toujours en quête d&apos;apprentissage. Je suis
                             prêt à apporter mes compétences analytiques et de
