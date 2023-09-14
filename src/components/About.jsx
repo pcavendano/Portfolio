@@ -124,8 +124,8 @@ const About = () => {
                     </header>
                     <article>
                         <p>
-                            👋 Je suis Pedro, un aspirant développeur Full Stack
-                            avec des fortes connaissances en Front-End. <br />
+                            👋 Je suis Pedro, développeur Full Stack
+                            avec de fortes connaissances en Front-End. <br />
                             <br /> Ma passion pour la réparation, la
                             compréhension du fonctionnement interne des
                             appareils électroniques et des automobiles m&apos;a
