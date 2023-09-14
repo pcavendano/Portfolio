@@ -17,6 +17,7 @@ import eclipse from "../assets/icons/eclipse.svg";
 import androidstudio from "../assets/icons/androidstudio.svg";
 import wordpress from "../assets/icons/wordpress.svg";
 import kirby from "../assets/icons/kirby.svg";
+import dotnet from "../assets/icons/dotnet.svg";
 
 const About = () => {
     useEffect(() => {
@@ -129,7 +130,7 @@ const About = () => {
                             compréhension du fonctionnement interne des
                             appareils électroniques et des automobiles m&apos;a
                             poussé à retourner à l&apos;école et à devenir
-                            développeur Full Stack. Je me considére comme
+                            développeur web Full-Stack. Je me considére comme
                             quelqu&apos;un de responsable, coopératif, curieux
                             et toujours en quête d&apos;apprentissage. Je suis
                             prêt à apporter mes compétences analytiques et de
@@ -152,12 +153,12 @@ const About = () => {
                             <h3>Présent</h3>
                             <p>
                                 Mon éducation actuelle est principalement axée
-                                sur le design et développement de produits web.
+                                sur le design et développement d&apos;interfaces web.
                                 Je suis capable de créer des interfaces web en
                                 utilisant des outils de maquettage tels que
                                 Figma et les convertir en code fonctionnel en
-                                utilisant React, Angular, Javascript Vanille et
-                                une infrastructure backend en PHP ou Laravel.
+                                utilisant React, Angular ou Javascript pur et
+                                une infrastructure backend en Laravel (MVC et REST API).
                                 Cependant, lors de mes études collégiales (DEC),
                                 j&apos;ai également appris la Programmation
                                 Orientée Objet (POO) et les patrons de conceptio avec Java, les algorithmes en
@@ -275,6 +276,12 @@ const About = () => {
                                             <img
                                                 src={vscode}
                                                 alt="vscode icon"
+                                            />
+                                        </a>
+                                        <a href="https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet-core/">
+                                            <img
+                                                src={dotnet}
+                                                alt="microsoft dotnet icon"
                                             />
                                         </a>
                                         <a href="https://www.eclipse.org/downloads/">

@@ -511,24 +511,6 @@ Projects section
     justify-content: space-between;
 }
 
-.border.six {
-    -webkit-text-stroke: 4px var(--c-black);
-}
-
-.border.four {
-    -webkit-text-stroke: 2px var(--c-black);
-}
-
-@media screen and (min-width: 1024px) {
-    .border.six {
-        -webkit-text-stroke: 6px var(--c-black);
-    }
-
-    .border.four {
-        -webkit-text-stroke: 4px var(--c-black);
-    }
-}
-
 .home_projects .recette.red {
     color: var(--c-yellow);
 }
