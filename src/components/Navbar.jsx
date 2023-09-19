@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Lottie from "lottie-react";
 import fire from "../assets/lottie/fire.json";
 
 const Navbar = () => {
+
+    useEffect(() => {
+
+
+        window.addEventListener("scroll", (e) => {
+            const doc = document.documentElement;
+            const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+            const header = document.getElementsByClassName("site-header")[0]
+            if (top > 15) {
+              header.style.borderRadius = "0 0 0 0";
+            } else {
+              header.style.borderRadius = "0.5rem 0.5rem 0 0;";
+            }
+          });
+    }, [])
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
