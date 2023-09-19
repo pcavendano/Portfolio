@@ -1,6 +1,6 @@
 {
     "mm": {
-        "projectDescription": "Pendant mon stage chez <a class=\"calotte\" href=\"https://calotte.ca/\" target=\"_blank\" rel=\"noopener noreferrer\">calotte.ca</a>, l'un de mes mandats consistait à travailler sur la refonte du site MeilleurMonde.org",
+        "projectDescription": "Pendant mon stage chez <a class=\"calotte\" href=\"https://calotte.ca/\" target=\"_blank\" rel=\"noopener noreferrer\">calotte.ca</a>, l'un de mes mandats consistait à travailler sur la refonte du site <a class=\"calotte\" href=\"https://meilleurmonde.org/\" target=\"_blank\" rel=\"noopener noreferrer\">MeilleurMonde.org</a>",
         "projectIngridients": "Sous la supervision de Vincent, j'ai activement contribué à la création du site en utilisant Kirby CMS, qui est basé sur PHP, en plus d'utiliser CSS et JavaScript pur.",
         "projectProcedure": "Ce fût un stage très enrichissant. J'ai pu apprendre beaucoup de choses sur le développement web et sur le travail en équipe. J'ai également appris à utiliser un CMS et à travailler avec des outils de collaboration comme GitHub et Slack. Mes compétences en CSS et JavaScript se sont aussi peaufinées."
     },
