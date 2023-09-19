@@ -40,8 +40,7 @@ const Ingredient = (props) => {
                 </div>
                 <div className={`${display} grid`}>
                     <div className="project_description ">
-                        <p>
-                            {props.data}
+                        <p dangerouslySetInnerHTML={{ __html: props.data }}>
                         </p>
                     </div>
                 </div>
