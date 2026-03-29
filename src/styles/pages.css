@@ -421,6 +421,72 @@
   padding-left: 2rem;
 }
 
+/* Terminal interactive form */
+.terminal-interactive {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.send-hint {
+  font-size: 0.8125rem;
+  margin-top: 0.5rem;
+  opacity: 0.6;
+}
+
+.terminal-output {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  padding: 1rem;
+  border-radius: 2px;
+  cursor: default;
+}
+
+.terminal-line {
+  line-height: 1.8;
+  min-height: 1.6em;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 0.25rem;
+}
+
+.terminal-input {
+  background: none;
+  border: none;
+  color: var(--c-fg);
+  font-family: var(--ff-mono);
+  font-size: 0.875rem;
+  outline: none;
+  flex: 1;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.terminal-textarea {
+  resize: none;
+  min-height: 3em;
+}
+
+.terminal-submit {
+  background: none;
+  border: 1px solid var(--c-border);
+  color: var(--c-fg-secondary);
+  font-family: var(--ff-mono);
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.terminal-submit:hover {
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
 /* =============================================
    ADMIN DASHBOARD
    ============================================= */
