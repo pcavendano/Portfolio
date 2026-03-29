@@ -1,9 +1,33 @@
+const ASCII_NAME = `
+ ██████╗  ███████╗ ██████╗  ██████╗   ██████╗
+ ██╔══██╗ ██╔════╝ ██╔══██╗ ██╔══██╗ ██╔═══██╗
+ ██████╔╝ █████╗   ██║  ██║ ██████╔╝ ██║   ██║
+ ██╔═══╝  ██╔══╝   ██║  ██║ ██╔══██╗ ██║   ██║
+ ██║      ███████╗ ██████╔╝ ██║  ██║ ╚██████╔╝
+ ╚═╝      ╚══════╝ ╚═════╝  ╚═╝  ╚═╝  ╚═════╝`
+
+// Subtle cactus — a nod to Mexico
+const CACTUS = `
+  _  _
+ | || |
+ | || |
+ |_||_|
+/||  ||\\
+ ||  ||
+ ||  ||
+~~~~~~~~~~~`
+
 const Readme = () => {
   return (
     <div className="readme">
       <div className="readme-header">
-        <h1>Pedro Contreras Avendano</h1>
-        <p className="readme-tagline">SuiteScript &amp; JavaScript Developer</p>
+        <div className="ascii-banner">
+          <pre className="ascii-name">{ASCII_NAME}</pre>
+          <pre className="ascii-art">{CACTUS}</pre>
+        </div>
+        <p className="readme-subtitle">Contreras Avendano</p>
+        <p className="readme-tagline">SuiteScript &amp; JavaScript Developer &bull; Montreal, QC</p>
+        <p className="readme-version">v2.0.0</p>
       </div>
 
       <section className="readme-section">
