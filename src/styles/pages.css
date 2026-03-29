@@ -597,15 +597,147 @@
   overflow-x: auto;
 }
 
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.btn-danger {
+  color: var(--c-red);
+}
+
+.btn-danger:hover {
+  border-color: var(--c-red);
+}
+
+.btn-save {
+  background: var(--c-bg-header);
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
+.btn-save:hover {
+  color: var(--c-fg);
+}
+
+.btn-save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-published {
+  color: var(--c-green);
+  border-color: var(--c-green);
+}
+
+.btn-draft {
+  color: var(--c-red);
+  border-color: var(--c-red);
+}
+
+/* Editor */
+.editor {
+  margin-top: 1rem;
+}
+
+.editor-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.editor-field label {
+  font-size: 0.8125rem;
+}
+
+.editor-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.editor-row .editor-field {
+  flex: 1;
+}
+
+.editor-input-full {
+  width: 100%;
+}
+
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.editor-textarea {
+  width: 100%;
+  background: var(--c-bg-header);
+  border: 1px solid var(--c-border);
+  color: var(--c-fg);
+  font-family: var(--ff-mono);
+  font-size: 0.875rem;
+  padding: 1rem;
+  border-radius: 2px;
+  resize: vertical;
+  outline: none;
+  line-height: 1.6;
+}
+
+.editor-textarea:focus {
+  border-color: var(--c-orange);
+}
+
+.editor-preview {
+  background: var(--c-bg-header);
+  border: 1px solid var(--c-border);
+  padding: 1rem;
+  border-radius: 2px;
+  min-height: 300px;
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 @media (max-width: 640px) {
   .admin-table-header,
   .admin-table-row {
-    grid-template-columns: 80px 1fr 80px;
+    grid-template-columns: 80px 1fr;
   }
 
-  .admin-table-header span:last-child,
-  .admin-table-row span:last-child {
+  .admin-table-header span:nth-child(3),
+  .admin-table-header span:nth-child(4),
+  .admin-table-row span:nth-child(3),
+  .admin-table-row .admin-actions {
     display: none;
+  }
+
+  .editor-row {
+    flex-direction: column;
   }
 }
 

@@ -1,41 +1,181 @@
-import { useState } from 'react'
-import { getAllBlogPosts } from '../utils/blog'
-
-const ADMIN_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8' // "password" — change this
-
-async function hashPassword(password) {
-  const encoder = new TextEncoder()
-  const data = encoder.encode(password)
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data)
-  return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('')
-}
+import { useState, useEffect, useCallback } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import {
+  getToken, setToken, clearToken, validateToken,
+  listPosts, savePost, deletePost, togglePublished
+} from '../utils/github'
 
 const Admin = () => {
-  const [authed, setAuthed] = useState(() => {
-    if (import.meta.env.DEV) return true
-    return localStorage.getItem('admin_auth') === 'true'
-  })
-  const [password, setPassword] = useState('')
+  const [authed, setAuthed] = useState(false)
+  const [username, setUsername] = useState('')
+  const [tokenInput, setTokenInput] = useState('')
   const [error, setError] = useState('')
-  const [activeTab, setActiveTab] = useState('blog')
+  const [loading, setLoading] = useState(true)
 
-  const posts = getAllBlogPosts()
+  const [activeTab, setActiveTab] = useState('blog')
+  const [posts, setPosts] = useState([])
+  const [postsLoading, setPostsLoading] = useState(false)
+
+  // Editor state
+  const [editing, setEditing] = useState(null) // null | 'new' | post object
+  const [editorTitle, setEditorTitle] = useState('')
+  const [editorDate, setEditorDate] = useState('')
+  const [editorTags, setEditorTags] = useState('')
+  const [editorExcerpt, setEditorExcerpt] = useState('')
+  const [editorPublished, setEditorPublished] = useState(true)
+  const [editorBody, setEditorBody] = useState('')
+  const [editorPreview, setEditorPreview] = useState(false)
+  const [saving, setSaving] = useState(false)
+  const [statusMsg, setStatusMsg] = useState('')
+
+  // Check auth on mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      const token = getToken()
+      if (token) {
+        const login = await validateToken()
+        if (login) {
+          setAuthed(true)
+          setUsername(login)
+        } else {
+          clearToken()
+        }
+      }
+      setLoading(false)
+    }
+    checkAuth()
+  }, [])
 
   const handleLogin = async (e) => {
     e.preventDefault()
-    const hash = await hashPassword(password)
-    if (hash === ADMIN_HASH) {
-      localStorage.setItem('admin_auth', 'true')
+    setError('')
+    setToken(tokenInput)
+    const login = await validateToken()
+    if (login) {
       setAuthed(true)
-      setError('')
+      setUsername(login)
     } else {
-      setError('Invalid password')
+      clearToken()
+      setError('Invalid token — needs repo Contents access to pcavendano/Portfolio')
     }
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('admin_auth')
+    clearToken()
     setAuthed(false)
+    setUsername('')
+    setPosts([])
+  }
+
+  const fetchPosts = useCallback(async () => {
+    setPostsLoading(true)
+    try {
+      const data = await listPosts()
+      setPosts(data)
+    } catch (err) {
+      setError(err.message)
+    }
+    setPostsLoading(false)
+  }, [])
+
+  useEffect(() => {
+    if (authed && activeTab === 'blog') fetchPosts()
+  }, [authed, activeTab, fetchPosts])
+
+  const openEditor = (post) => {
+    if (post === 'new') {
+      setEditing('new')
+      setEditorTitle('')
+      setEditorDate(new Date().toISOString().split('T')[0])
+      setEditorTags('')
+      setEditorExcerpt('')
+      setEditorPublished(true)
+      setEditorBody('')
+    } else {
+      setEditing(post)
+      setEditorTitle(post.title)
+      setEditorDate(post.date)
+      setEditorTags(Array.isArray(post.tags) ? post.tags.join(', ') : '')
+      setEditorExcerpt(post.excerpt)
+      setEditorPublished(post.published)
+      setEditorBody(post.body)
+    }
+    setEditorPreview(false)
+    setStatusMsg('')
+  }
+
+  const closeEditor = () => {
+    setEditing(null)
+    setStatusMsg('')
+  }
+
+  const buildMarkdown = () => {
+    const tags = editorTags.split(',').map(t => t.trim()).filter(Boolean)
+    const tagStr = tags.length ? `[${tags.map(t => `"${t}"`).join(', ')}]` : '[]'
+
+    return `---
+title: "${editorTitle}"
+date: "${editorDate}"
+tags: ${tagStr}
+excerpt: "${editorExcerpt}"
+published: ${editorPublished}
+---
+
+${editorBody}`
+  }
+
+  const handleSave = async () => {
+    setSaving(true)
+    setStatusMsg('')
+    try {
+      const content = buildMarkdown()
+      let filename
+      if (editing === 'new') {
+        const slug = editorTitle
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '')
+        filename = `${slug}.md`
+        await savePost(filename, content, null, `Create ${filename}`)
+      } else {
+        filename = editing.filename
+        await savePost(filename, content, editing.sha, `Update ${filename}`)
+      }
+      setStatusMsg(`Saved! Deploy triggered — live in ~1 min.`)
+      await fetchPosts()
+      closeEditor()
+    } catch (err) {
+      setStatusMsg(`Error: ${err.message}`)
+    }
+    setSaving(false)
+  }
+
+  const handleToggle = async (post) => {
+    try {
+      await togglePublished(post.filename, post.sha, post.raw)
+      await fetchPosts()
+    } catch (err) {
+      setError(err.message)
+    }
+  }
+
+  const handleDelete = async (post) => {
+    if (!confirm(`Delete "${post.title}"? This cannot be undone.`)) return
+    try {
+      await deletePost(post.filename, post.sha)
+      await fetchPosts()
+    } catch (err) {
+      setError(err.message)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="admin">
+        <p className="text-dim">Loading...</p>
+      </div>
+    )
   }
 
   if (!authed) {
@@ -44,32 +184,147 @@ const Admin = () => {
         <h1>Admin</h1>
         <div className="admin-login">
           <p className="text-dim">
-            <span className="prompt">sudo authenticate</span>
+            <span className="prompt">authenticate --github</span>
+          </p>
+          <p className="text-dim" style={{ marginTop: '0.5rem', fontSize: '0.8125rem' }}>
+            Enter a GitHub Personal Access Token with Contents read/write access to pcavendano/Portfolio.
           </p>
           <form onSubmit={handleLogin} className="admin-form">
             <label>
-              <span className="text-green">password: </span>
+              <span className="text-green">token: </span>
               <input
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={tokenInput}
+                onChange={(e) => setTokenInput(e.target.value)}
                 className="admin-input"
+                placeholder="github_pat_..."
                 autoFocus
               />
             </label>
-            <button type="submit" className="admin-btn">authenticate</button>
+            <button type="submit" className="admin-btn">connect</button>
           </form>
-          {error && <p className="text-red">{error}</p>}
+          {error && <p className="text-red" style={{ marginTop: '0.5rem' }}>{error}</p>}
+
+          <div className="admin-help" style={{ marginTop: '2rem' }}>
+            <p className="section-comment">How to create a token</p>
+            <ul className="admin-help-list">
+              <li>Go to GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens</li>
+              <li>Repository access: <code>pcavendano/Portfolio</code> only</li>
+              <li>Permissions: Contents → Read and write</li>
+            </ul>
+          </div>
         </div>
       </div>
     )
   }
 
+  // Editor view
+  if (editing !== null) {
+    return (
+      <div className="admin">
+        <div className="admin-header">
+          <h1>{editing === 'new' ? 'New Post' : `Edit: ${editing.title}`}</h1>
+          <button onClick={closeEditor} className="admin-btn admin-btn-small">cancel</button>
+        </div>
+
+        <div className="editor">
+          <div className="editor-fields">
+            <div className="editor-field">
+              <label className="text-green">title</label>
+              <input
+                value={editorTitle}
+                onChange={(e) => setEditorTitle(e.target.value)}
+                className="admin-input editor-input-full"
+              />
+            </div>
+            <div className="editor-row">
+              <div className="editor-field">
+                <label className="text-green">date</label>
+                <input
+                  type="date"
+                  value={editorDate}
+                  onChange={(e) => setEditorDate(e.target.value)}
+                  className="admin-input"
+                />
+              </div>
+              <div className="editor-field">
+                <label className="text-green">tags</label>
+                <input
+                  value={editorTags}
+                  onChange={(e) => setEditorTags(e.target.value)}
+                  className="admin-input"
+                  placeholder="react, portfolio"
+                />
+              </div>
+              <div className="editor-field">
+                <label className="text-green">published</label>
+                <button
+                  onClick={() => setEditorPublished(!editorPublished)}
+                  className={`admin-btn ${editorPublished ? 'btn-published' : 'btn-draft'}`}
+                >
+                  {editorPublished ? 'published' : 'draft'}
+                </button>
+              </div>
+            </div>
+            <div className="editor-field">
+              <label className="text-green">excerpt</label>
+              <input
+                value={editorExcerpt}
+                onChange={(e) => setEditorExcerpt(e.target.value)}
+                className="admin-input editor-input-full"
+                placeholder="Short description for the blog list"
+              />
+            </div>
+          </div>
+
+          <div className="editor-toolbar">
+            <span className="text-dim">Content (Markdown)</span>
+            <button
+              onClick={() => setEditorPreview(!editorPreview)}
+              className="admin-btn admin-btn-small"
+            >
+              {editorPreview ? 'edit' : 'preview'}
+            </button>
+          </div>
+
+          {editorPreview ? (
+            <div className="editor-preview blog-post-content">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{editorBody}</ReactMarkdown>
+            </div>
+          ) : (
+            <textarea
+              value={editorBody}
+              onChange={(e) => setEditorBody(e.target.value)}
+              className="editor-textarea"
+              rows={20}
+            />
+          )}
+
+          <div className="editor-actions">
+            <button
+              onClick={handleSave}
+              disabled={saving || !editorTitle}
+              className="admin-btn btn-save"
+            >
+              {saving ? 'saving...' : 'save & deploy'}
+            </button>
+            <button onClick={closeEditor} className="admin-btn">cancel</button>
+            {statusMsg && <span className={statusMsg.startsWith('Error') ? 'text-red' : 'text-green'}>{statusMsg}</span>}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Main admin view
   return (
     <div className="admin">
       <div className="admin-header">
         <h1>Admin Dashboard</h1>
-        <button onClick={handleLogout} className="admin-btn admin-btn-small">logout</button>
+        <div className="admin-header-right">
+          <span className="text-dim">@{username}</span>
+          <button onClick={handleLogout} className="admin-btn admin-btn-small">logout</button>
+        </div>
       </div>
 
       <div className="admin-tabs">
@@ -87,36 +342,44 @@ const Admin = () => {
         </button>
       </div>
 
+      {error && <p className="text-red" style={{ marginBottom: '1rem' }}>{error}</p>}
+      {statusMsg && <p className="text-green" style={{ marginBottom: '1rem' }}>{statusMsg}</p>}
+
       {activeTab === 'blog' && (
         <div className="admin-section">
-          <h2 className="section-comment">Blog Posts ({posts.length})</h2>
-          <div className="admin-table">
-            <div className="admin-table-header">
-              <span>STATUS</span>
-              <span>TITLE</span>
-              <span>DATE</span>
-              <span>TAGS</span>
-            </div>
-            {posts.map((post) => (
-              <div key={post.slug} className="admin-table-row">
-                <span className={post.published ? 'text-green' : 'text-red'}>
-                  {post.published ? 'published' : 'draft'}
-                </span>
-                <span>{post.title}</span>
-                <span className="text-dim">{post.date}</span>
-                <span className="text-dim">{post.tags.join(', ')}</span>
+          <div className="admin-section-header">
+            <h2 className="section-comment">Blog Posts ({posts.length})</h2>
+            <button onClick={() => openEditor('new')} className="admin-btn">+ new post</button>
+          </div>
+
+          {postsLoading ? (
+            <p className="text-dim">Fetching posts from GitHub...</p>
+          ) : (
+            <div className="admin-table">
+              <div className="admin-table-header">
+                <span>STATUS</span>
+                <span>TITLE</span>
+                <span>DATE</span>
+                <span>ACTIONS</span>
               </div>
-            ))}
-          </div>
-          <div className="admin-help">
-            <p className="section-comment">How to manage posts</p>
-            <ul className="admin-help-list">
-              <li>Posts live in <code>src/content/blog/*.md</code></li>
-              <li>Set <code>published: false</code> in frontmatter to hide a post</li>
-              <li>Set <code>published: true</code> to make it visible</li>
-              <li>Commit and push to deploy changes</li>
-            </ul>
-          </div>
+              {posts.map((post) => (
+                <div key={post.filename} className="admin-table-row">
+                  <span className={post.published ? 'text-green' : 'text-red'}>
+                    {post.published ? 'published' : 'draft'}
+                  </span>
+                  <span>{post.title || post.filename}</span>
+                  <span className="text-dim">{post.date}</span>
+                  <div className="admin-actions">
+                    <button onClick={() => openEditor(post)} className="admin-btn admin-btn-small">edit</button>
+                    <button onClick={() => handleToggle(post)} className="admin-btn admin-btn-small">
+                      {post.published ? 'unpublish' : 'publish'}
+                    </button>
+                    <button onClick={() => handleDelete(post)} className="admin-btn admin-btn-small btn-danger">delete</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -148,15 +411,6 @@ const Admin = () => {
               <span className="text-green">analytics</span>
               <a href="https://app.usefathom.com/" target="_blank" rel="noopener noreferrer">Fathom Analytics</a>
             </div>
-          </div>
-
-          <div className="admin-help" style={{ marginTop: '2rem' }}>
-            <p className="section-comment">Quick deploy</p>
-            <pre className="admin-code">
-{`git add -A
-git commit -m "update content"
-git push origin main`}
-            </pre>
           </div>
         </div>
       )}
