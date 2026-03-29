@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 
 const FORM_URL = 'https://formspree.io/f/xreoppgd'
+const COOLDOWN_MS = 60000 // 1 minute between submissions
+const COOLDOWN_KEY = 'contact_last_sent'
 
 const Contact = () => {
   const [mode, setMode] = useState('info') // 'info' | 'form' | 'sent'
@@ -69,6 +71,15 @@ const Contact = () => {
       setLines(newLines)
       setStep(step + 1)
     } else {
+      // Rate limit check
+      const lastSent = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0')
+      const elapsed = Date.now() - lastSent
+      if (elapsed < COOLDOWN_MS) {
+        const wait = Math.ceil((COOLDOWN_MS - elapsed) / 1000)
+        setLines([...newLines, { type: 'blank' }, { type: 'error', text: `Rate limited. Please wait ${wait}s before sending again.` }])
+        return
+      }
+
       // Final step — send the email
       setLines([...newLines, { type: 'blank' }, { type: 'info', text: 'Sending...' }])
       setSending(true)
@@ -82,6 +93,7 @@ const Contact = () => {
         })
 
         if (res.ok) {
+          localStorage.setItem(COOLDOWN_KEY, Date.now().toString())
           setLines(prev => [
             ...prev.slice(0, -1),
             { type: 'success', text: 'Message sent successfully!' },
