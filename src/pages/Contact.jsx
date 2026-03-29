@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-const FORM_URL = 'https://formspree.io/f/xpwdzgvk' // Replace with your Formspree form ID
+const FORM_URL = 'https://formspree.io/f/xreoppgd'
 
 const Contact = () => {
   const [mode, setMode] = useState('info') // 'info' | 'form' | 'sent'
