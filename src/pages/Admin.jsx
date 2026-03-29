@@ -6,7 +6,19 @@ import {
   listPosts, savePost, deletePost, togglePublished
 } from '../utils/github'
 
+// SHA-256 hash of the pre-password
+const GATE_HASH = '6d11dd98e498e3af2a823483daeaae68fb13acab754551f07b30f1e2e67eb1e3'
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('')
+}
+
 const Admin = () => {
+  const [gateOpen, setGateOpen] = useState(() => localStorage.getItem('admin_gate') === 'true')
+  const [gateInput, setGateInput] = useState('')
+  const [gateError, setGateError] = useState('')
+
   const [authed, setAuthed] = useState(false)
   const [username, setUsername] = useState('')
   const [tokenInput, setTokenInput] = useState('')
@@ -170,6 +182,38 @@ ${editorBody}`
     }
   }
 
+  const handleGate = async (e) => {
+    e.preventDefault()
+    const hash = await sha256(gateInput)
+    if (hash === GATE_HASH) {
+      localStorage.setItem('admin_gate', 'true')
+      setGateOpen(true)
+      setGateError('')
+    } else {
+      setGateError('Access denied')
+    }
+  }
+
+  if (!gateOpen) {
+    return (
+      <div className="admin">
+        <h1>404</h1>
+        <p className="text-dim">Page not found.</p>
+        <form onSubmit={handleGate} className="admin-form" style={{ marginTop: '3rem', opacity: 0.3 }}>
+          <input
+            type="password"
+            value={gateInput}
+            onChange={(e) => setGateInput(e.target.value)}
+            className="admin-input"
+            style={{ border: 'none', background: 'transparent', color: 'var(--c-fg-muted)' }}
+            autoFocus
+          />
+        </form>
+        {gateError && <p className="text-red" style={{ marginTop: '0.5rem', fontSize: '0.75rem' }}>{gateError}</p>}
+      </div>
+    )
+  }
+
   if (loading) {
     return (
       <div className="admin">
@@ -183,12 +227,6 @@ ${editorBody}`
       <div className="admin">
         <h1>Admin</h1>
         <div className="admin-login">
-          <p className="text-dim">
-            <span className="prompt">authenticate --github</span>
-          </p>
-          <p className="text-dim" style={{ marginTop: '0.5rem', fontSize: '0.8125rem' }}>
-            Enter a GitHub Personal Access Token with Contents read/write access to pcavendano/Portfolio.
-          </p>
           <form onSubmit={handleLogin} className="admin-form">
             <label>
               <span className="text-green">token: </span>
@@ -204,15 +242,6 @@ ${editorBody}`
             <button type="submit" className="admin-btn">connect</button>
           </form>
           {error && <p className="text-red" style={{ marginTop: '0.5rem' }}>{error}</p>}
-
-          <div className="admin-help" style={{ marginTop: '2rem' }}>
-            <p className="section-comment">How to create a token</p>
-            <ul className="admin-help-list">
-              <li>Go to GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens</li>
-              <li>Repository access: <code>pcavendano/Portfolio</code> only</li>
-              <li>Permissions: Contents → Read and write</li>
-            </ul>
-          </div>
         </div>
       </div>
     )

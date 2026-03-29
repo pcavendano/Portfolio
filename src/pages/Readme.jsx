@@ -6,16 +6,18 @@ const ASCII_NAME = `
  ██║      ███████╗ ██████╔╝ ██║  ██║ ╚██████╔╝
  ╚═╝      ╚══════╝ ╚═════╝  ╚═╝  ╚═╝  ╚═════╝`
 
-// Subtle cactus — a nod to Mexico
-const CACTUS = `
-  _  _
- | || |
- | || |
- |_||_|
-/||  ||\\
- ||  ||
- ||  ||
-~~~~~~~~~~~`
+// Palm tree — Veracruz, Mexico
+const PALM = `
+   ___ _
+  /  // \\
+ /  // _ \\
+/__//_/ \\_\\
+   ||
+   ||
+   ||
+   ||
+  _||_
+ /____\\`
 
 const Readme = () => {
   return (
@@ -23,7 +25,7 @@ const Readme = () => {
       <div className="readme-header">
         <div className="ascii-banner">
           <pre className="ascii-name">{ASCII_NAME}</pre>
-          <pre className="ascii-art">{CACTUS}</pre>
+          <pre className="ascii-art">{PALM}</pre>
         </div>
         <p className="readme-subtitle">Contreras Avendano</p>
         <p className="readme-tagline">SuiteScript &amp; JavaScript Developer &bull; Montreal, QC</p>
