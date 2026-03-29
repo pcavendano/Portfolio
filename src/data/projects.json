@@ -1,0 +1,59 @@
+{
+  "featured": [
+    {
+      "id": "learning-center",
+      "name": "Learning Center",
+      "tagline": "Full-stack employee training platform on NetSuite",
+      "description": "An interactive training platform that enables employees to complete courses with bilingual content, take quizzes with server-side grading, and track their progress. Built as a React SPA served through a NetSuite SuiteLet with a SuiteScript backend handling data persistence and quiz validation.",
+      "stack": ["React 19", "SuiteScript 2.1", "NetSuite", "Vite", "Datadog"],
+      "features": [
+        "Bilingual content delivery (EN/FR) with context-based i18n",
+        "Quiz system with server-side grading — answers never sent to the client",
+        "Per-user progress tracking via NetSuite custom records",
+        "Course prerequisites and sequential section unlocking",
+        "Datadog integration for server-side observability",
+        "Dev mode with localStorage mock for local development"
+      ],
+      "status": "production",
+      "type": "full-stack"
+    },
+    {
+      "id": "extreme-suitelets",
+      "name": "Extreme SuiteLets",
+      "tagline": "19 production SuiteScript applications for NetSuite",
+      "description": "A collection of custom SuiteLet applications that extend NetSuite's capabilities. These range from real-time KPI dashboards to third-party integration monitors, data tools, and workflow automation interfaces.",
+      "stack": ["SuiteScript 2.1", "TypeScript", "jQuery", "SuiteQL", "REST APIs"],
+      "features": [
+        "Real-time warehouse and company KPI dashboards",
+        "HighJump WMS integration monitoring and recovery",
+        "Product image bulk downloader with ZIP export",
+        "Interactive SuiteQL query tool",
+        "Shopify order reconciliation and close-out",
+        "Support case Kanban board with drag-and-drop"
+      ],
+      "status": "production",
+      "type": "collection"
+    }
+  ],
+  "suitelets": [
+    { "id": "warehouse-kpi-v4", "name": "Warehouse KPI Dashboard v4", "description": "Real-time warehouse performance metrics and indicators", "status": "active" },
+    { "id": "company-kpi-usa", "name": "Company KPI USA", "description": "Company-wide KPI visualization dashboard", "status": "active" },
+    { "id": "hj-status", "name": "HighJump Status Monitor", "description": "HighJump WMS integration health and order recovery", "status": "active" },
+    { "id": "hj-order-pool", "name": "HJ Order Pool", "description": "Warehouse order pool status and management", "status": "active" },
+    { "id": "image-downloader", "name": "Product Image Downloader", "description": "Bulk product image search and ZIP download", "status": "active" },
+    { "id": "suiteql-tool", "name": "SuiteQL Query Tool", "description": "Interactive SuiteQL query builder and executor", "status": "active" },
+    { "id": "kanban", "name": "Support Case Kanban", "description": "Visual kanban board for support case management", "status": "active" },
+    { "id": "csv-imports", "name": "CSV Import Dashboard", "description": "CSV import job monitoring and management", "status": "active" },
+    { "id": "close-shopify", "name": "Close Shopify Orders", "description": "Shopify-NetSuite order reconciliation tool", "status": "active" },
+    { "id": "orders-on-hold", "name": "Orders On Hold", "description": "Dashboard for monitoring held orders", "status": "active" },
+    { "id": "prod-approvals", "name": "Production Approvals", "description": "Production workflow approval interface", "status": "active" },
+    { "id": "weekly-email", "name": "Weekly Email Builder", "description": "Compose and distribute weekly summary emails", "status": "active" },
+    { "id": "nike-futures", "name": "Nike Futures Browser", "description": "Browse Nike futures data and configuration", "status": "active" },
+    { "id": "js-equality", "name": "JS Equality Table", "description": "Interactive JavaScript == vs === comparison tool", "status": "active" },
+    { "id": "search-analytics", "name": "Search Analytics", "description": "Search usage tracking and analytics dashboard", "status": "active" },
+    { "id": "learning-center-sl", "name": "Learning Center", "description": "Employee training platform with quizzes and progress tracking", "status": "active" },
+    { "id": "green-room", "name": "The Green Room", "description": "CEO motivational email builder and distributor", "status": "active" },
+    { "id": "dfs", "name": "Document Flow System", "description": "Document management and workflow automation", "status": "active" },
+    { "id": "admin-dashboard", "name": "Admin Dashboard", "description": "Admin tools for CSV imports and system config", "status": "active" }
+  ]
+}

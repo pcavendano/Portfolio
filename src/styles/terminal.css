@@ -1,0 +1,173 @@
+/* Terminal window and line styles */
+
+.terminal-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header / Tab bar */
+.terminal-header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--c-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--c-bg-header);
+  display: flex;
+  align-items: stretch;
+}
+
+.terminal-logo {
+  padding: 0 1.5rem;
+  border-right: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+  color: var(--c-fg);
+  white-space: nowrap;
+  gap: 0.5rem;
+}
+
+.terminal-logo .dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-logo .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-logo .dot--red { background: #ff5f57; }
+.terminal-logo .dot--yellow { background: #febc2e; }
+.terminal-logo .dot--green { background: #28c840; }
+
+/* Nav tabs */
+.terminal-nav {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.terminal-nav a,
+.terminal-nav .nav-external {
+  color: var(--c-fg-secondary);
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.1s;
+}
+
+.terminal-nav a:hover,
+.terminal-nav .nav-external:hover {
+  background: var(--c-bg-hover);
+  text-decoration: none;
+}
+
+.terminal-nav a.active {
+  color: var(--c-fg);
+  background: var(--c-bg-active);
+}
+
+/* Main content */
+.terminal-main {
+  flex: 1;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem var(--gutter) 5rem;
+}
+
+/* Line component */
+.line {
+  display: flex;
+  line-height: var(--line-height);
+  align-items: center;
+  padding: 0 var(--gutter);
+  color: var(--c-fg-dim);
+  border-left: 2px solid transparent;
+}
+
+.line:hover {
+  background: var(--c-bg-hover);
+}
+
+.line-number {
+  color: var(--c-fg-muted);
+  width: 3ch;
+  text-align: right;
+  margin-right: 2ch;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+  background: var(--c-orange);
+  width: 10px;
+  height: 19px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Command prompt */
+.prompt::before {
+  content: "$ ";
+  color: var(--c-green);
+}
+
+/* Section headers */
+.section-comment {
+  color: var(--c-fg-muted);
+}
+
+.section-comment::before {
+  content: "# ";
+}
+
+/* Footer */
+.terminal-footer {
+  border-top: 1px solid var(--c-border);
+  padding: 1rem var(--gutter);
+  color: var(--c-fg-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.terminal-footer a {
+  color: var(--c-fg-secondary);
+}
+
+@media (max-width: 640px) {
+  .terminal-logo span {
+    display: none;
+  }
+
+  .terminal-nav a,
+  .terminal-nav .nav-external {
+    padding: 0 0.75rem;
+    font-size: 13px;
+  }
+
+  .terminal-main {
+    padding: 2rem 1rem 3rem;
+  }
+}

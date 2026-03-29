@@ -1,307 +1,75 @@
-/* COLORS */
+/* TERMINAL THEME — inspired by terminal.shop */
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("../assets/fonts/geist-mono-latin.woff2") format("woff2"),
+       url("../assets/fonts/geist-mono-latin.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
 
 :root {
-    /* 
-    Exemple:
-    --c-white: #fff;
-	--c-black: #000;
-	--c-yellow: #ffd433;
-	--c-green: #009687;
-	--c-peach: #EB9E7D;
-	--c-pink: #ff8fc7;
-	--c-blue: #4f4ae5;
-	--c-bg: var(--c-white);
-	--c-fg: var(--c-black);
+  /* Colors */
+  --c-bg: #000000;
+  --c-bg-header: #151719;
+  --c-bg-hover: #ddf2fd1c;
+  --c-bg-active: #e1f0fe24;
 
-	color: var(--c-fg); */
+  --c-fg: #ffffff;
+  --c-fg-secondary: #f0f7ff9e;
+  --c-fg-dim: #e5f2ff78;
+  --c-fg-muted: #555555;
 
-    --c-white: #fff;
-    --c-black: #000;
-    /* Primary */
-    --c-green: #106b62;
-    /* Secondary */
-    --c-red: #ea572f;
-    /* Tertiary */
-    --c-accent: #ce4b27;
-    /* Accent */
-    --c-yellow: #e3d45d;
-    /* Text */
-    --c-peach: #ffe5b8;
-    /* Foreground */
-    --c-fg: #14534d;
-    /* Background */
-    --c-bg: var(--c-green);
+  --c-orange: #ff5e00;
+  --c-green: #25d0ab;
+  --c-blue: #2e98d6;
+  --c-red: #ff5757;
+  --c-yellow: rgb(255 184 0);
 
-    color: var(--c-bg);
+  --c-border: #3a3e41;
+  --c-selection: #3a3e41;
+
+  /* Typography */
+  --ff-mono: "Geist Mono", "Menlo", "Consolas", "Monaco", monospace;
+
+  /* Spacing */
+  --line-height: 40px;
+  --header-height: 40px;
+  --content-max-width: 720px;
+  --gutter: 22px;
 }
 
-/* SPACINGS */
-
-:root {
-    /* 
-	--rhythm: 4.5rem;
-	--gutter: 1rem;
-	--inner: 1rem;
-	--site: 2560px; 
-	*/
-    --rhythm: 2rem;
-    --gutter: 1.5rem;
-    --inner: 1rem;
+/* Base */
+html {
+  font-size: 14px;
 }
 
-@media (min-width: 1024px) {
-    :root {
-        /* 
-		--rhythm: 7rem;
-		--gutter: 1rem;
-		--inner: 4.5rem;
-		--site: 2560px; 
-		*/
-        --rhythm: 6rem;
-        --gutter: 1rem;
-        --inner: 2rem;
-        --site: 1920px;
-    }
-}
-
-/* TEXT */
-
-/* https://fonts.google.com/specimen/Abril+Fatface?preview.text=Full%20Stack%0D%0AWeb%20Developer%0D%0Aconsecte%20to%20adipiscingin&preview.text_type=custom&category=Serif,Display,Handwriting,Monospace */
-
-/* Paytone One */
-/* latin-ext */
-@font-face {
-    font-family: 'Paytone One';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/paytoneone/v23/0nksC9P7MfYHj2oFtYm2ChTjgPvNiA.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Paytone One';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/paytoneone/v23/0nksC9P7MfYHj2oFtYm2ChTtgPs.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* Spectral */
-@font-face {
-    font-family: 'Spectral';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/spectral/v13/rnCr-xNNww_2s0amA9M5kng.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
- 
-  /* chango */
-  @font-face {
-    font-family: 'Chango';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/chango/v27/2V0cKI0OB5U7WaJCyHe5.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  /* Inknut Antiqua */
-  @font-face {
-    font-family: 'Inknut Antiqua';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/inknutantiqua/v14/Y4GSYax7VC4ot_qNB4nYpBdaKUUE4J0.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: "Bebas";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""), url("../assets/fonts/BebasNeue.woff2") format("woff2"),
-        url("../assets/fonts/BebasNeue.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKEverett";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""),
-        url("../assets/fonts/TWKEverett-Regular.woff2") format("woff2"),
-        url("../assets/fonts/TWKEverett-Regular.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKEverett";
-    font-style: normal;
-    font-weight: 700;
-    src: local(""), url("../assets/fonts/TWKEverett-Bold.woff2") format("woff2"),
-        url("../assets/fonts/TWKEverett-Bold.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 100;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-100.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-100.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 200;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-200.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-200.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 300;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-300.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-300.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-400.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-400.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 500;
-    src: local(""),
-        url("../assets/fonts/TWKLausannePan-500.woff2") format("woff2"),
-        url("../assets/fonts/TWKLausannePan-500.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 600;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-600.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-600.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 700;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-700.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-700.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 800;
-    src: local(""),
-        url("../assets/fonts/TWKLausanne/TWKLausannePan-800.woff2")
-            format("woff2"),
-        url("../assets/fonts/TWKLausannePan-800.woff2") format("woff");
-}
-
-@font-face {
-    font-family: "TWKLausanne";
-    font-style: normal;
-    font-weight: 900;
-    src: local(""),
-        url("../assets/fonts/TWKLausannePan-900.woff2") format("woff2"),
-        url("../assets/fonts/TWKLausannePan-900.woff2") format("woff");
-}
-
-/* Setting font related properties */
-:root {
-    --ff-sans: TWKLausanne, -apple-system, BlinkMacSystemFont, avenir next,
-        avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
-        noto, arial, sans-serif;
-    --ff-serif: Paytone One,Bebas, Iowan Old Style, Apple Garamond, Baskerville,
-        Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    --ff-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
-        monospace;
-    font-family: var(--ff-sans);
-    font-size: 12px;
-    font-weight: 400;
-    background: var(--c-fg);
-    color: var(--c-peach);
-    line-height: 1.33337;
-    letter-spacing: -.01em;
-
-    --fs-xs: 0.55rem;
-    --fs-s: 0.75rem;
-    --fs-m: 1rem;
-    --fs-l: 1.6rem;
-    --fs-xl: 2.6rem;
-    --fs-2xl: 4rem;
-    --fs-3xl: 6.8rem;
-
-    --fw--light: 200;
-    --fw-bold: 700;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--ff-serif);
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--c-red);
-}
-
-@media (min-width: 1024px) {
-    /* 
-	golden ratio possbilites:
-	1, 1.6, 2.6, 4.2, 6.8, 11.1 
-	*/
-    :root {
-        font-size: 1vw;
-        --fs-xs: 0.55rem;
-        --fs-s: 0.75rem;
-        --fs-m: 1.6rem;
-        --fs-l: 2.6rem;
-        --fs-xl: 4.2rem;
-        --fs-2xl: 6.8rem;
-		--fs-3xl: 11.1rem;
-    }
-}
-
-@media (min-width: 2560px) {
-    :root {
-        font-size: 25px;
-    }
+body {
+  font-family: var(--ff-mono);
+  background: var(--c-bg);
+  color: var(--c-fg);
+  line-height: 1.6;
+  letter-spacing: -0.32px;
+  margin: 0;
+  min-height: 100vh;
 }
 
 ::selection {
-    background-color: var(--c-yellow);
-    color: var(--c-darkgreen);
+  background: var(--c-selection);
+}
+
+a {
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 13px;
+  }
 }

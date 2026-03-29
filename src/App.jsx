@@ -1,22 +1,23 @@
-import React from "react";
-import { Navbar, Hero, About, Footer, Projects } from "./components";
-
+import { Routes, Route } from 'react-router-dom'
+import TerminalLayout from './components/TerminalLayout'
+import Readme from './pages/Readme'
+import Projects from './pages/Projects'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
+import Contact from './pages/Contact'
 
 const App = () => {
+  return (
+    <Routes>
+      <Route element={<TerminalLayout />}>
+        <Route path="/" element={<Readme />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  )
+}
 
-    return (
-        <div id="site">
-          <div id="page" className="home">
-            <Navbar />
-            <main>
-              <Hero/>
-              <About />
-              <Projects />
-            </main>
-            <Footer />
-          </div>
-        </div>
-    );
-};
-
-export default App;
+export default App

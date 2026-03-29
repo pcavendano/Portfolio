@@ -1,7 +1,4 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import About from "./About";
-import Footer from "./Footer";
-import Projects from "./Projects";
+import TerminalLayout from './TerminalLayout'
+import TabBar from './TabBar'
 
-export { Navbar, Hero, Footer, About, Projects };
+export { TerminalLayout, TabBar }
