@@ -1,0 +1,52 @@
+name: Deploy Portfolio to Digital Ocean
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to droplet
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DO_DROPLET_IP }}
+          username: ${{ secrets.DO_SSH_USER }}
+          key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
+          script: |
+            PROJECT_DIR="/home/${{ secrets.DO_SSH_USER }}/portfolio"
+            mkdir -p "$PROJECT_DIR"
+
+            if [ ! -d "$PROJECT_DIR/.git" ]; then
+              git clone https://github.com/${{ github.repository }}.git "$PROJECT_DIR"
+            fi
+
+            cd "$PROJECT_DIR"
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Install and build
+            npm ci
+            npm run build
+
+            # Copy built files to Nginx serving directory
+            sudo rm -rf /var/www/pcavendano.com/*
+            sudo cp -r dist/* /var/www/pcavendano.com/
+
+            echo "Portfolio deploy complete!"
