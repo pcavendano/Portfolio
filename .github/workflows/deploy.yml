@@ -30,16 +30,16 @@ jobs:
           username: ${{ secrets.DO_SSH_USER }}
           key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
           script: |
-            PROJECT_DIR="/home/${{ secrets.DO_SSH_USER }}/portfolio"
-            SERVE_DIR="/var/www/pcavendano.com"
+            SERVE_DIR="/home/ploi/pcavendano.com/dist"
+            PROJECT_DIR="/home/root/portfolio"
             mkdir -p "$PROJECT_DIR"
 
             # Archive current site as v1 (only if v1 doesn't exist yet)
             if [ ! -d "$SERVE_DIR/v1" ] && [ -f "$SERVE_DIR/index.html" ]; then
               echo "Archiving current site as v1..."
-              sudo mkdir -p "$SERVE_DIR/v1"
-              sudo cp -r "$SERVE_DIR"/* "$SERVE_DIR/v1/" 2>/dev/null || true
-              sudo rm -rf "$SERVE_DIR/v1/v1"
+              mkdir -p "$SERVE_DIR/v1"
+              cp -r "$SERVE_DIR"/* "$SERVE_DIR/v1/" 2>/dev/null || true
+              rm -rf "$SERVE_DIR/v1/v1"
             fi
 
             if [ ! -d "$PROJECT_DIR/.git" ]; then
@@ -54,12 +54,8 @@ jobs:
             npm ci
             npm run build
 
-            # Copy built files (preserve v1 archive)
-            sudo find "$SERVE_DIR" -maxdepth 1 -not -name 'v1' -not -name '.' -exec rm -rf {} + 2>/dev/null || true
-            sudo cp -r dist/* "$SERVE_DIR/"
-
-            # Copy nginx config
-            sudo cp nginx/default.conf /etc/nginx/conf.d/default.conf 2>/dev/null || true
-            sudo nginx -t && sudo systemctl reload nginx 2>/dev/null || true
+            # Deploy built files to Ploi serve directory (preserve v1)
+            find "$SERVE_DIR" -maxdepth 1 -not -name 'v1' -not -path "$SERVE_DIR" -exec rm -rf {} +
+            cp -r dist/* "$SERVE_DIR/"
 
             echo "Portfolio deploy complete!"
