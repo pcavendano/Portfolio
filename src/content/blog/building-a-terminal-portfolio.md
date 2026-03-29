@@ -3,6 +3,7 @@ title: "Building a Terminal-Themed Portfolio"
 date: "2026-03-28"
 tags: ["react", "portfolio", "design"]
 excerpt: "Why I rebuilt my portfolio to look like a terminal — and what I learned along the way."
+published: true
 ---
 
 ## Why a terminal theme?
@@ -13,12 +14,12 @@ But I've changed since then. I'm now a SuiteScript developer building production
 
 ## What I'm building now
 
-At Mint Green Group, I build internal tools that solve real business problems:
+At my current role, I build internal tools that solve real business problems:
 
-- **Learning Center** — a training platform with quizzes, progress tracking, and bilingual support
-- **Warehouse KPI Dashboards** — real-time metrics for warehouse operations
-- **Integration monitors** — keeping HighJump and Shopify in sync with NetSuite
-- **Data tools** — SuiteQL query builders, CSV import engines, image downloaders
+- **Training platforms** — learning apps with quizzes, progress tracking, and bilingual support
+- **Real-time dashboards** — KPI metrics for warehouse and company operations
+- **Integration monitors** — keeping WMS and e-commerce platforms in sync with the ERP
+- **Data tools** — query builders, CSV import engines, image downloaders
 
 These aren't flashy portfolio pieces with fancy animations. They're tools that people use every day to do their jobs better. I wanted my portfolio to reflect that — minimal, functional, focused on content.
 

@@ -34,8 +34,8 @@ function parseFrontmatter(raw) {
   return { data, content }
 }
 
-export function getBlogPosts() {
-  const posts = Object.entries(modules).map(([filepath, raw]) => {
+function parseAllPosts() {
+  return Object.entries(modules).map(([filepath, raw]) => {
     const slug = filepath.split('/').pop().replace('.md', '')
     const { data, content } = parseFrontmatter(raw)
 
@@ -45,9 +45,16 @@ export function getBlogPosts() {
       date: data.date || '',
       tags: data.tags || [],
       excerpt: data.excerpt || '',
+      published: data.published !== 'false' && data.published !== false,
       content,
     }
-  })
+  }).sort((a, b) => (b.date > a.date ? 1 : -1))
+}
 
-  return posts.sort((a, b) => (b.date > a.date ? 1 : -1))
+export function getBlogPosts() {
+  return parseAllPosts().filter(p => p.published)
+}
+
+export function getAllBlogPosts() {
+  return parseAllPosts()
 }

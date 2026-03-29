@@ -10,7 +10,7 @@ const Readme = () => {
         <h2 className="section-comment">About</h2>
         <p>
           I build internal tools, dashboards, and integrations on the NetSuite
-          platform at <strong>Mint Green Group</strong>. I specialize in creating
+          platform for a mid-size distribution company. I specialize in creating
           full-stack applications using SuiteScript 2.1 and modern JavaScript
           frameworks that streamline business operations and extend ERP
           capabilities.
@@ -28,7 +28,7 @@ const Readme = () => {
         <ul className="readme-list">
           <li><span className="text-green">Custom SuiteScript Applications</span> — SuiteLets, RESTlets, scheduled scripts, and Map/Reduce scripts</li>
           <li><span className="text-green">React Front-ends</span> — modern SPAs deployed inside NetSuite via SuiteLet HTML injection</li>
-          <li><span className="text-green">Third-Party Integrations</span> — HighJump WMS, Shopify, Datadog, AWS S3</li>
+          <li><span className="text-green">Third-Party Integrations</span> — WMS, e-commerce platforms, monitoring, cloud storage</li>
           <li><span className="text-green">Data Tools</span> — SuiteQL query builders, CSV import engines, search analytics</li>
           <li><span className="text-green">KPI Dashboards</span> — real-time warehouse and company performance monitoring</li>
         </ul>
@@ -47,7 +47,7 @@ const Readme = () => {
           </div>
           <div>
             <h3>Platforms</h3>
-            <p className="text-dim">NetSuite, Shopify, HighJump WMS, Digital Ocean, Docker</p>
+            <p className="text-dim">NetSuite, E-commerce Platforms, WMS, Digital Ocean, Docker</p>
           </div>
           <div>
             <h3>Tools</h3>

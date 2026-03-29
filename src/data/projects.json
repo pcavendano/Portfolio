@@ -1,59 +1,90 @@
 {
-  "featured": [
+  "summary": {
+    "title": "What I Build",
+    "description": "I develop internal tools and custom applications on the NetSuite/SuiteScript platform for a mid-size distribution company. Here's a breakdown of the types of solutions I deliver.",
+    "stats": {
+      "apps": "19+",
+      "label": "production applications"
+    }
+  },
+  "capabilities": [
     {
-      "id": "learning-center",
-      "name": "Learning Center",
-      "tagline": "Full-stack employee training platform on NetSuite",
-      "description": "An interactive training platform that enables employees to complete courses with bilingual content, take quizzes with server-side grading, and track their progress. Built as a React SPA served through a NetSuite SuiteLet with a SuiteScript backend handling data persistence and quiz validation.",
-      "stack": ["React 19", "SuiteScript 2.1", "NetSuite", "Vite", "Datadog"],
-      "features": [
-        "Bilingual content delivery (EN/FR) with context-based i18n",
-        "Quiz system with server-side grading — answers never sent to the client",
-        "Per-user progress tracking via NetSuite custom records",
-        "Course prerequisites and sequential section unlocking",
-        "Datadog integration for server-side observability",
-        "Dev mode with localStorage mock for local development"
+      "id": "training-platforms",
+      "category": "Training & Onboarding Platforms",
+      "description": "Full-stack learning management systems with interactive courses, server-side quiz grading, per-user progress tracking, and bilingual content delivery (EN/FR).",
+      "highlights": [
+        "React SPA served through ERP backend",
+        "Quiz answers validated server-side — never exposed to the client",
+        "Course prerequisites and sequential unlocking",
+        "Observability integration for server-side logging"
       ],
-      "status": "production",
-      "type": "full-stack"
+      "stack": ["React 19", "SuiteScript 2.1", "Vite", "Datadog"],
+      "scale": "Used by all employees for onboarding and ongoing training"
     },
     {
-      "id": "extreme-suitelets",
-      "name": "Extreme SuiteLets",
-      "tagline": "19 production SuiteScript applications for NetSuite",
-      "description": "A collection of custom SuiteLet applications that extend NetSuite's capabilities. These range from real-time KPI dashboards to third-party integration monitors, data tools, and workflow automation interfaces.",
-      "stack": ["SuiteScript 2.1", "TypeScript", "jQuery", "SuiteQL", "REST APIs"],
-      "features": [
-        "Real-time warehouse and company KPI dashboards",
-        "HighJump WMS integration monitoring and recovery",
-        "Product image bulk downloader with ZIP export",
-        "Interactive SuiteQL query tool",
-        "Shopify order reconciliation and close-out",
-        "Support case Kanban board with drag-and-drop"
+      "id": "dashboards",
+      "category": "Real-Time Dashboards",
+      "description": "KPI dashboards for warehouse operations and company-wide performance metrics. Multiple iterations refined through direct feedback from operations teams.",
+      "highlights": [
+        "Live warehouse performance indicators",
+        "Company-wide KPI visualizations",
+        "Client-side pagination and filtering",
+        "Auto-refreshing data with governance optimization"
       ],
-      "status": "production",
-      "type": "collection"
+      "stack": ["SuiteScript 2.1", "SuiteQL", "JavaScript", "CSS"],
+      "scale": "4+ dashboards monitored daily by operations and management"
+    },
+    {
+      "id": "integrations",
+      "category": "Third-Party Integrations",
+      "description": "Monitoring and recovery tools for warehouse management system (WMS) and e-commerce platform synchronization. Built to detect failures, surface actionable errors, and enable one-click recovery.",
+      "highlights": [
+        "WMS integration health monitoring",
+        "E-commerce order reconciliation and close-out",
+        "External API session management and caching",
+        "Error detection with re-trigger capabilities"
+      ],
+      "stack": ["REST APIs", "SuiteScript 2.1", "Scheduled Scripts", "Map/Reduce"],
+      "scale": "Processes thousands of orders across multiple channels"
+    },
+    {
+      "id": "data-tools",
+      "category": "Data & Reporting Tools",
+      "description": "Interactive query builders, bulk data processors, and search analytics tools that give teams self-service access to ERP data without writing code.",
+      "highlights": [
+        "Interactive SQL-like query builder and executor",
+        "Bulk image search and ZIP export",
+        "CSV import job monitoring and management",
+        "Search usage analytics and tracking"
+      ],
+      "stack": ["SuiteQL", "Map/Reduce Scripts", "JavaScript", "REST APIs"],
+      "scale": "5+ tools used across departments"
+    },
+    {
+      "id": "workflow",
+      "category": "Workflow & Communication",
+      "description": "Approval interfaces, order management tools, email builders, and document management systems that streamline daily operations.",
+      "highlights": [
+        "Production approval workflows",
+        "Order hold monitoring dashboards",
+        "Weekly summary email composer and distributor",
+        "Document flow management and automation"
+      ],
+      "stack": ["SuiteScript 2.1", "HTML Templating", "Custom Records", "Saved Searches"],
+      "scale": "Supports daily operations across multiple teams"
+    },
+    {
+      "id": "developer-tools",
+      "category": "Developer & Admin Tools",
+      "description": "Internal tools for developers and admins — from interactive JavaScript reference tables to admin dashboards for system configuration and data imports.",
+      "highlights": [
+        "Interactive JS equality comparison tool",
+        "Admin dashboard for CSV imports and config",
+        "Support case Kanban board with visual management",
+        "Data browser for product catalog exploration"
+      ],
+      "stack": ["TypeScript", "jQuery", "SuiteScript 2.1", "SuiteQL"],
+      "scale": "Used by dev and admin teams"
     }
-  ],
-  "suitelets": [
-    { "id": "warehouse-kpi-v4", "name": "Warehouse KPI Dashboard v4", "description": "Real-time warehouse performance metrics and indicators", "status": "active" },
-    { "id": "company-kpi-usa", "name": "Company KPI USA", "description": "Company-wide KPI visualization dashboard", "status": "active" },
-    { "id": "hj-status", "name": "HighJump Status Monitor", "description": "HighJump WMS integration health and order recovery", "status": "active" },
-    { "id": "hj-order-pool", "name": "HJ Order Pool", "description": "Warehouse order pool status and management", "status": "active" },
-    { "id": "image-downloader", "name": "Product Image Downloader", "description": "Bulk product image search and ZIP download", "status": "active" },
-    { "id": "suiteql-tool", "name": "SuiteQL Query Tool", "description": "Interactive SuiteQL query builder and executor", "status": "active" },
-    { "id": "kanban", "name": "Support Case Kanban", "description": "Visual kanban board for support case management", "status": "active" },
-    { "id": "csv-imports", "name": "CSV Import Dashboard", "description": "CSV import job monitoring and management", "status": "active" },
-    { "id": "close-shopify", "name": "Close Shopify Orders", "description": "Shopify-NetSuite order reconciliation tool", "status": "active" },
-    { "id": "orders-on-hold", "name": "Orders On Hold", "description": "Dashboard for monitoring held orders", "status": "active" },
-    { "id": "prod-approvals", "name": "Production Approvals", "description": "Production workflow approval interface", "status": "active" },
-    { "id": "weekly-email", "name": "Weekly Email Builder", "description": "Compose and distribute weekly summary emails", "status": "active" },
-    { "id": "nike-futures", "name": "Nike Futures Browser", "description": "Browse Nike futures data and configuration", "status": "active" },
-    { "id": "js-equality", "name": "JS Equality Table", "description": "Interactive JavaScript == vs === comparison tool", "status": "active" },
-    { "id": "search-analytics", "name": "Search Analytics", "description": "Search usage tracking and analytics dashboard", "status": "active" },
-    { "id": "learning-center-sl", "name": "Learning Center", "description": "Employee training platform with quizzes and progress tracking", "status": "active" },
-    { "id": "green-room", "name": "The Green Room", "description": "CEO motivational email builder and distributor", "status": "active" },
-    { "id": "dfs", "name": "Document Flow System", "description": "Document management and workflow automation", "status": "active" },
-    { "id": "admin-dashboard", "name": "Admin Dashboard", "description": "Admin tools for CSV imports and system config", "status": "active" }
   ]
 }
