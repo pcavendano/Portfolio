@@ -27,7 +27,7 @@
 /* Palm scene — replaces ASCII art */
 .palm-scene {
   flex-shrink: 0;
-  width: 140px;
+  width: 170px;
   align-self: flex-end;
 }
 
