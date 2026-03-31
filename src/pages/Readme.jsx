@@ -1,3 +1,5 @@
+import PalmScene from '../components/PalmScene'
+
 const ASCII_NAME = `
  ██████╗  ███████╗ ██████╗  ██████╗   ██████╗
  ██╔══██╗ ██╔════╝ ██╔══██╗ ██╔══██╗ ██╔═══██╗
@@ -6,26 +8,13 @@ const ASCII_NAME = `
  ██║      ███████╗ ██████╔╝ ██║  ██║ ╚██████╔╝
  ╚═╝      ╚══════╝ ╚═════╝  ╚═╝  ╚═╝  ╚═════╝`
 
-// Palm tree — Veracruz, Mexico
-const PALM = `
-   ___ _
-  /  // \\
- /  // _ \\
-/__//_/ \\_\\
-   ||
-   ||
-   ||
-   ||
-  _||_
- /____\\`
-
 const Readme = () => {
   return (
     <div className="readme">
       <div className="readme-header">
         <div className="ascii-banner">
           <pre className="ascii-name">{ASCII_NAME}</pre>
-          <pre className="ascii-art">{PALM}</pre>
+          <PalmScene />
         </div>
         <p className="readme-subtitle">Contreras Avendano</p>
         <p className="readme-tagline">SuiteScript &amp; JavaScript Developer &bull; Montreal, QC</p>

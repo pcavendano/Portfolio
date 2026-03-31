@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
 import TabBar from './TabBar'
+import AnimatedOutlet from './AnimatedOutlet'
 
 const TerminalLayout = () => {
   return (
@@ -17,7 +17,7 @@ const TerminalLayout = () => {
       </header>
 
       <main className="terminal-main">
-        <Outlet />
+        <AnimatedOutlet />
       </main>
 
       <footer className="terminal-footer">
