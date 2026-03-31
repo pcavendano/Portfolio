@@ -886,6 +886,286 @@
   display: block;
 }
 
+/* =============================================
+   CONSULTING PAGE
+   ============================================= */
+
+.consulting h1,
+.consulting-status h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.consulting > .text-dim {
+  margin-bottom: 0.5rem;
+}
+
+.consulting-meta {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.consulting-section {
+  margin-bottom: 2rem;
+}
+
+.consulting-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+/* Calendar */
+.cal {
+  max-width: 320px;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.cal-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.cal-nav {
+  background: none;
+  border: 1px solid var(--c-border);
+  color: var(--c-fg-secondary);
+  font-family: var(--ff-mono);
+  font-size: 0.875rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.cal-nav:hover:not(:disabled) {
+  border-color: var(--c-fg-muted);
+  color: var(--c-fg);
+}
+
+.cal-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-day-label {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--c-fg-muted);
+  padding: 0.25rem 0;
+}
+
+.cal-cell {
+  text-align: center;
+  font-family: var(--ff-mono);
+  font-size: 0.8125rem;
+  padding: 0.35rem 0;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--c-fg);
+}
+
+.cal-empty {
+  cursor: default;
+}
+
+.cal-past,
+.cal-unavailable,
+.cal-blocked {
+  color: var(--c-fg-muted);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.cal-full {
+  color: var(--c-red);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cal-available:hover {
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
+.cal-selected {
+  background: var(--c-green);
+  color: var(--c-bg);
+  font-weight: 700;
+}
+
+.cal-today {
+  border-color: var(--c-fg-muted);
+}
+
+.cal-legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--c-fg-dim);
+}
+
+.cal-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.cal-dot-available { background: var(--c-green); }
+.cal-dot-full { background: var(--c-red); }
+.cal-dot-blocked { background: var(--c-fg-muted); }
+
+/* Time slots */
+.time-slots {
+  margin-top: 0.5rem;
+}
+
+.time-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.time-slot {
+  background: none;
+  border: 1px solid var(--c-border);
+  color: var(--c-fg-secondary);
+  font-family: var(--ff-mono);
+  font-size: 0.8125rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.time-slot:hover:not(:disabled) {
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
+.time-slot-booked {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.time-slot-selected {
+  background: var(--c-green);
+  color: var(--c-bg);
+  border-color: var(--c-green);
+  font-weight: 700;
+}
+
+/* Consulting status page */
+.consulting-status {
+  max-width: var(--content-max-width);
+}
+
+.status-banner {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.status-banner-success {
+  border-color: var(--c-green);
+}
+
+.status-banner-warn {
+  border-color: var(--c-orange);
+}
+
+.consulting-pay-section {
+  margin-top: 1.5rem;
+}
+
+.pay-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.625rem 1.5rem;
+  background: var(--c-green);
+  color: var(--c-bg);
+  font-family: var(--ff-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+/* Admin consulting */
+.booking-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.booking-row-grid {
+  grid-template-columns: 80px 1fr 130px 80px 1fr !important;
+}
+
+.reject-form {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--c-red);
+  border-radius: 2px;
+}
+
+.booking-details {
+  margin-top: 0.25rem;
+}
+
+.booking-details summary {
+  cursor: pointer;
+}
+
+.consulting-settings-editor {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .booking-row-grid {
+    grid-template-columns: 70px 1fr !important;
+  }
+
+  .booking-row-grid span:nth-child(3),
+  .booking-row-grid span:nth-child(4) {
+    display: none;
+  }
+
+  .time-grid {
+    gap: 0.25rem;
+  }
+
+  .time-slot {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 .cursor-line {
   margin-top: 2rem;
   display: flex;

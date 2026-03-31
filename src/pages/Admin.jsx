@@ -5,6 +5,7 @@ import {
   getToken, setToken, clearToken, validateToken,
   listPosts, savePost, deletePost, togglePublished
 } from '../utils/github'
+import AdminConsulting from '../components/AdminConsulting'
 
 // SHA-256 hash of the pre-password
 const GATE_HASH = '6d11dd98e498e3af2a823483daeaae68fb13acab754551f07b30f1e2e67eb1e3'
@@ -364,6 +365,12 @@ ${editorBody}`
           blog posts
         </button>
         <button
+          className={`admin-tab ${activeTab === 'consulting' ? 'active' : ''}`}
+          onClick={() => setActiveTab('consulting')}
+        >
+          consulting
+        </button>
+        <button
           className={`admin-tab ${activeTab === 'info' ? 'active' : ''}`}
           onClick={() => setActiveTab('info')}
         >
@@ -411,6 +418,8 @@ ${editorBody}`
           )}
         </div>
       )}
+
+      {activeTab === 'consulting' && <AdminConsulting />}
 
       {activeTab === 'info' && (
         <div className="admin-section">

@@ -4,6 +4,7 @@ const tabs = [
   { to: '/', label: 'readme' },
   { to: '/projects', label: 'projects' },
   { to: '/blog', label: 'blog' },
+  { to: '/consulting', label: 'consulting' },
   { to: '/contact', label: 'contact' },
 ]
 
