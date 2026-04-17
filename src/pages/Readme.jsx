@@ -1,4 +1,5 @@
 import PalmScene from '../components/PalmScene'
+import TerminalPrompt from '../components/TerminalPrompt'
 
 const ASCII_NAME = `
  ██████╗  ███████╗ ██████╗  ██████╗   ██████╗
@@ -92,10 +93,7 @@ const Readme = () => {
         </div>
       </section>
 
-      <div className="cursor-line">
-        <span className="prompt" />
-        <span className="cursor" />
-      </div>
+      <TerminalPrompt />
     </div>
   )
 }
