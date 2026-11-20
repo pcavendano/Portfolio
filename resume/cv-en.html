@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pedro Contreras Avendaño — Resume</title>
+<link rel="stylesheet" href="cv.css">
+</head>
+<body>
+<main class="page">
+
+<header>
+  <div>
+    <h1>Pedro Contreras Avendaño</h1>
+    <p class="role">NetSuite Analyst-Developer · Agentic AI Workflows</p>
+  </div>
+  <ul class="contact">
+    <li>Montréal, QC · +1 514 839-1246</li>
+    <li>pcavendano.dev@gmail.com · pcavendano.com</li>
+    <li>linkedin.com/in/pcavendano</li>
+    <li>github.com/pcavendano</li>
+  </ul>
+</header>
+
+<section class="summary">
+  <p>
+    NetSuite developer who builds <strong>AI agents wired directly into the ERP</strong>:
+    MCP tools (NetSuite AI Connector) that let Claude read and write NetSuite under server-enforced rules,
+    with a preview, human approval and an audit log on every write. I also ship the foundation underneath:
+    SuiteScript 2.1, SDF, RESTlets, Map/Reduce, WMS and e-commerce integrations, and the documentation
+    that lets a team maintain it.
+  </p>
+</section>
+
+<section>
+  <h2>Core skills</h2>
+  <dl class="skills">
+    <dt>NetSuite</dt>
+    <dd>SuiteScript 2.x (Suitelet, RESTlet, User Event, Client, Map/Reduce, Scheduled, Event Subscriber),
+        SuiteFlow, SuiteBuilder, SDF / SuiteCloud CLI, SuiteQL, saved searches, SuiteScript 1.0 → 2.1 migration</dd>
+    <dt>AI &amp; agents</dt>
+    <dd>NetSuite AI Connector (custom MCP tools), Claude / Claude Code, agent and skill design, review sub-agents,
+        spec-driven development (Spec Kit), Claude and OpenAI APIs, DeepL, AI governance</dd>
+    <dt>Integrations</dt>
+    <dd>SuiteTalk REST, RESTlets, third-party REST APIs, Körber/HighJump (WMS), Shopify via Celigo, NuORDER, SFTP/HULFT,
+        Microsoft Fabric / Power BI, Microsoft Graph</dd>
+    <dt>Web &amp; data</dt>
+    <dd>JavaScript, TypeScript, React, Vite, Node.js, SQL, Python, Kafka, Spark, Cassandra</dd>
+    <dt>Ops</dt>
+    <dd>Git / GitHub Actions, Docker, Kubernetes (k3s, kind, Helm), DigitalOcean, Grafana / Loki (LGTM), Linux, NGINX</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <article>
+    <div class="job-head">
+      <h3>Mint Green Group <span>· NetSuite Analyst-Developer [CONFIRM: title]</span></h3>
+      <p class="when">[CONFIRM: start] – present · Montréal</p>
+    </div>
+    <p class="context">Licensed apparel and accessories distributor (Canada and US), multiple subsidiaries,
+      in-house production and embroidery. Sole NetSuite developer: about 1,900 commits in 2026.</p>
+
+    <h4>AI agents and agentic workflows</h4>
+    <ul>
+      <li><strong>5 MCP toolsets</strong> for the NetSuite AI Connector, used in production by Claude:
+          support cases (18 methods), freight billing, credit-rebill, transaction file attachments,
+          Shopify order cancellation. Every write goes <em>preview → approve → execute</em>,
+          with server-side validation and an audit log.</li>
+      <li><strong>Freight billing agent</strong>: takes a carrier invoice PDF (UPS, FedEx, Purolator, etc.),
+          traces every shipment to its sales order, return or purchase order, then creates the vendor bill
+          split by brand. 93% of shipments traced automatically.</li>
+      <li><strong>Agent skills (runbooks)</strong> for repetitive accounting and operations work:
+          credit-rebills, return authorizations that mirror the invoice, sales-order log repair,
+          saved-search documentation. Code walks the runbook; the model only classifies and drafts.</li>
+      <li><strong>Q&amp;A agent</strong> for leadership with role-scoped access, a reports agent (in progress),
+          and a project agent that turns Teams discussions into specifications.</li>
+      <li><strong>Spec-driven development</strong> (Spec Kit): more than 25 specifications shipped, each one
+          reviewed by business-analyst and QA sub-agents before implementation.</li>
+      <li>Wrote the company's <strong>AI acceptable-use policy</strong> and led its rollout.</li>
+    </ul>
+
+    <h4>NetSuite: development, integrations and stability</h4>
+    <ul>
+      <li>About twenty production applications (React served by Suitelet + SuiteScript 2.1): production approvals
+          and order tracking, credit applications with e-signature, executive dashboard,
+          Shopify order management, internal support queue.</li>
+      <li><strong>Inventory and production</strong>: embroidery work orders, landed cost,
+          item reallocation, inventory transfers, stranded-inventory diagnosis.</li>
+      <li><strong>Integrations</strong>: Körber/HighJump WMS (statuses, ship-to addresses, order pool),
+          Shopify ↔ NetSuite via Celigo, NuORDER (SFTP → REST), HULFT file exchange with a partner.</li>
+      <li><strong>SuiteScript 1.0 → 2.1 migration</strong> of critical scripts (customers, credit dunning,
+          vendor prepayments, sales-rep dashboard), each with a rollback plan.</li>
+      <li><strong>Diagnostics and performance</strong>: sales-order save slowness investigations,
+          script telemetry in Grafana/Loki, AI-assisted error triage.</li>
+      <li><strong>Documentation</strong>: 60+ page knowledge base (scripts, integrations, dependencies,
+          deployment procedures) synced to Confluence; per-module SDF deploys with a production diff before each release.</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Self-employed <span>· Consultant</span></h3>
+      <p class="when">2026 – present</p>
+    </div>
+    <ul>
+      <li>Odoo 19 implementation (Mexico localization, CFDI 4.0 e-invoicing) for a multi-branch distributor,
+          on Kubernetes (k3s) at DigitalOcean, with a WhatsApp channel.</li>
+      <li>Linux / NGINX / Docker server administration and GitHub Actions CI/CD pipelines.</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Calotte.ca <span>· Web development intern</span></h3>
+      <p class="when">Summer 2023</p>
+    </div>
+    <ul><li>Launched three sites (PHP, Kirby CMS, HTMX, CSS) with the designer and project manager; client meetings.</li></ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Poincaré Experts-Conseils <span>· Systems administrator</span></h3>
+      <p class="when">2021 – 2022</p>
+    </div>
+    <ul><li>Moved workstations to Azure AD and Intune; migrated 10 TB of data to off-site backup.</li></ul>
+  </article>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>NetSuite Log Pipeline</strong>: about 380,000 script log lines a week replayed as a Kafka stream,
+        processed by Spark (real-time and batch), stored in Cassandra; predicts which scripts are likely to error.</li>
+  </ul>
+</section>
+
+<section class="two-col">
+  <div>
+    <h2>Education</h2>
+    <p><strong>[CONFIRM: data program]</strong>, 2025 – 2026<br><span class="dim">Distributed processing, data security, deployment</span></p>
+    <p><strong>AEC Web Site Design and Programming</strong>, 2022 – 2023<br><span class="dim">Collège de Maisonneuve</span></p>
+    <p><strong>DEC Computer Programmer-Analyst</strong>, 2018 – 2020<br><span class="dim">Collège de Maisonneuve</span></p>
+  </div>
+  <div>
+    <h2>Languages</h2>
+    <p>French and English (spoken and written) · Spanish (native)</p>
+    <h2>Interests</h2>
+    <p>Electronics repair, car mechanics, road cycling, hiking, cooking</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

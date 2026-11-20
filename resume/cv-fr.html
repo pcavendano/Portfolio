@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pedro Contreras Avendaño — CV</title>
+<link rel="stylesheet" href="cv.css">
+</head>
+<body>
+<main class="page">
+
+<header>
+  <div>
+    <h1>Pedro Contreras Avendaño</h1>
+    <p class="role">Analyste-développeur NetSuite · Flux de travail agentiques (IA)</p>
+  </div>
+  <ul class="contact">
+    <li>Montréal, QC · +1 514 839-1246</li>
+    <li>pcavendano.dev@gmail.com · pcavendano.com</li>
+    <li>linkedin.com/in/pcavendano</li>
+    <li>github.com/pcavendano</li>
+  </ul>
+</header>
+
+<section class="summary">
+  <p>
+    Développeur NetSuite qui construit des <strong>agents IA branchés directement sur l'ERP</strong> :
+    outils MCP (NetSuite AI Connector) qui permettent à Claude de lire et d'écrire dans NetSuite
+    sous des règles validées côté serveur, avec aperçu, approbation humaine et journal d'audit.
+    Je livre aussi la base solide derrière : SuiteScript 2.1, SDF, RESTlets, Map/Reduce,
+    intégrations WMS et e-commerce, et la documentation qui permet à une équipe de maintenir le tout.
+  </p>
+</section>
+
+<section>
+  <h2>Compétences clés</h2>
+  <dl class="skills">
+    <dt>NetSuite</dt>
+    <dd>SuiteScript 2.x (Suitelet, RESTlet, User Event, Client, Map/Reduce, Scheduled, Event Subscriber),
+        SuiteFlow, SuiteBuilder, SDF / SuiteCloud CLI, SuiteQL, recherches enregistrées, migration SuiteScript 1.0 → 2.1</dd>
+    <dt>IA &amp; agents</dt>
+    <dd>NetSuite AI Connector (outils MCP personnalisés), Claude / Claude Code, conception d'agents et de compétences (skills),
+        sous-agents de revue, développement piloté par spécifications (Spec Kit), API Claude et OpenAI, DeepL, gouvernance IA</dd>
+    <dt>Intégrations</dt>
+    <dd>SuiteTalk REST, RESTlets, API REST tierces, Körber/HighJump (WMS), Shopify via Celigo, NuORDER, SFTP/HULFT,
+        Microsoft Fabric / Power BI, Microsoft Graph</dd>
+    <dt>Web &amp; données</dt>
+    <dd>JavaScript, TypeScript, React, Vite, Node.js, SQL, Python, Kafka, Spark, Cassandra</dd>
+    <dt>Ops</dt>
+    <dd>Git / GitHub Actions, Docker, Kubernetes (k3s, kind, Helm), DigitalOcean, Grafana / Loki (LGTM), Linux, NGINX</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Expérience</h2>
+
+  <article>
+    <div class="job-head">
+      <h3>Mint Green Group <span>· Analyste-développeur NetSuite [À CONFIRMER : titre]</span></h3>
+      <p class="when">[À CONFIRMER : début] – aujourd'hui · Montréal</p>
+    </div>
+    <p class="context">Distributeur de vêtements et d'accessoires sous licence (Canada et É.-U.), plusieurs filiales,
+      production et broderie à l'interne. Seul développeur NetSuite : environ 1 900 commits en 2026.</p>
+
+    <h4>Agents IA et flux de travail agentiques</h4>
+    <ul>
+      <li><strong>5 ensembles d'outils MCP</strong> pour le NetSuite AI Connector, utilisés en production par Claude :
+          dossiers de soutien (18 méthodes), facturation de transport, crédit-refacturation, fichiers joints aux transactions,
+          annulation de commandes Shopify. Chaque écriture passe par <em>aperçu → approbation → exécution</em>,
+          avec validation côté serveur et journal d'audit.</li>
+      <li><strong>Agent de facturation de transport</strong> : à partir d'une facture PDF de transporteur (UPS, FedEx, Purolator, etc.),
+          retrace chaque envoi jusqu'à sa commande, son retour ou son bon d'achat, puis crée la facture fournisseur
+          répartie par marque. 93 % des envois retracés automatiquement.</li>
+      <li><strong>Compétences d'agent (runbooks)</strong> pour les tâches répétitives de la comptabilité et des opérations :
+          crédit-refacturation, autorisations de retour alignées sur la facture, réparation du journal des commandes,
+          documentation des recherches enregistrées. Le code suit les étapes du runbook ; le modèle classe et rédige.</li>
+      <li><strong>Agent de questions-réponses</strong> pour la direction avec accès limité par rôle, agent de rapports
+          (en cours) et un agent de projet qui transforme les discussions Teams en spécifications.</li>
+      <li><strong>Développement piloté par spécifications</strong> (Spec Kit) : plus de 25 spécifications livrées, chacune
+          revue par des sous-agents analyste d'affaires et assurance qualité avant l'implémentation.</li>
+      <li>Rédaction de la <strong>politique d'utilisation de l'IA</strong> et de son déploiement dans l'entreprise.</li>
+    </ul>
+
+    <h4>NetSuite : développement, intégrations et stabilité</h4>
+    <ul>
+      <li>Une vingtaine d'applications en production (React servi par Suitelet + SuiteScript 2.1) : approbations de production
+          et suivi des commandes, demandes de crédit avec signature électronique, tableau de bord de la direction,
+          gestion des commandes Shopify, file de soutien interne.</li>
+      <li><strong>Inventaire et production</strong> : bons de travail de broderie, coût au débarquement (landed cost),
+          réallocation d'articles, transferts d'inventaire, diagnostic d'inventaire bloqué.</li>
+      <li><strong>Intégrations</strong> : WMS Körber/HighJump (statuts, adresses d'expédition, file de commandes),
+          Shopify ↔ NetSuite via Celigo, NuORDER (passage SFTP → REST), échange de fichiers HULFT avec un partenaire.</li>
+      <li><strong>Migration SuiteScript 1.0 → 2.1</strong> de scripts critiques (clients, relances de crédit,
+          paiements anticipés fournisseurs, tableau des représentants), avec plan de retour arrière.</li>
+      <li><strong>Diagnostic et performance</strong> : enquêtes sur la lenteur d'enregistrement des commandes,
+          télémétrie des scripts dans Grafana/Loki, triage des erreurs assisté par IA.</li>
+      <li><strong>Documentation</strong> : base de connaissances de plus de 60 pages (scripts, intégrations,
+          dépendances, procédures de déploiement) synchronisée avec Confluence ; déploiements SDF par module avec comparaison
+          à la production avant chaque mise en ligne.</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Travailleur autonome <span>· Consultant</span></h3>
+      <p class="when">2026 – aujourd'hui</p>
+    </div>
+    <ul>
+      <li>Implantation Odoo 19 (localisation Mexique, facturation électronique CFDI 4.0) pour un distributeur multi-succursales,
+          sur Kubernetes (k3s) chez DigitalOcean, avec canal WhatsApp.</li>
+      <li>Administration de serveurs Linux / NGINX / Docker et pipelines CI/CD GitHub Actions.</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Calotte.ca <span>· Stagiaire, développement web</span></h3>
+      <p class="when">Été 2023</p>
+    </div>
+    <ul><li>Mise en ligne de trois sites (PHP, Kirby CMS, HTMX, CSS) avec le designer et le chargé de projet ; rencontres clients.</li></ul>
+  </article>
+
+  <article>
+    <div class="job-head">
+      <h3>Poincaré Experts-Conseils <span>· Administrateur de systèmes</span></h3>
+      <p class="when">2021 – 2022</p>
+    </div>
+    <ul><li>Migration des postes vers Azure AD et Intune ; migration de 10 To de données vers une sauvegarde hors site.</li></ul>
+  </article>
+</section>
+
+<section>
+  <h2>Projets</h2>
+  <ul>
+    <li><strong>NetSuite Log Pipeline</strong> : environ 380 000 lignes de journaux de scripts par semaine rejouées
+        en flux Kafka, traitées par Spark (temps réel et lots), stockées dans Cassandra ; prédiction des scripts à risque d'erreur.</li>
+  </ul>
+</section>
+
+<section class="two-col">
+  <div>
+    <h2>Formation</h2>
+    <p><strong>[À CONFIRMER : programme en données]</strong>, 2025 – 2026<br><span class="dim">Traitement distribué, sécurité des données, déploiement</span></p>
+    <p><strong>AEC Conception et programmation de sites Web</strong>, 2022 – 2023<br><span class="dim">Collège de Maisonneuve</span></p>
+    <p><strong>DEC Programmeur-analyste</strong>, 2018 – 2020<br><span class="dim">Collège de Maisonneuve</span></p>
+  </div>
+  <div>
+    <h2>Langues</h2>
+    <p>Français et anglais (parlé et écrit) · Espagnol (langue maternelle)</p>
+    <h2>Intérêts</h2>
+    <p>Réparation électronique, mécanique automobile, cyclisme sur route, randonnée, cuisine</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

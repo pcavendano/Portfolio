@@ -1,13 +1,32 @@
 {
   "summary": {
     "title": "What I Build",
-    "description": "I develop internal tools and custom applications on the NetSuite/SuiteScript platform for a mid-size distribution company. Here's a breakdown of the types of solutions I deliver.",
+    "description": "I build AI agents and internal applications on NetSuite for a licensed apparel distributor. Here's a breakdown of the types of solutions I deliver, starting with the agentic work.",
     "stats": {
-      "apps": "19+",
+      "apps": "20+",
       "label": "production applications"
     }
   },
   "capabilities": [
+    {
+      "id": "ai-agents",
+      "category": "AI Agents & Agentic Workflows",
+      "description": "Claude working inside the ERP through custom MCP tools on the NetSuite AI Connector. The agent proposes, a person approves, and the server enforces the rules and logs every write.",
+      "highlights": [
+        "5 production MCP toolsets: support cases, freight billing, credit-rebill, record files, Shopify order cancellation",
+        "Freight agent reads a carrier invoice PDF, traces each shipment to its order, and bills it by brand (93% traced automatically)",
+        "Runbooks as graphs: code walks the steps, the model only classifies and drafts",
+        "Spec-driven development with BA and QA review sub-agents, 25+ specs shipped",
+        "Company AI acceptable-use policy and rollout"
+      ],
+      "stack": [
+        "NetSuite AI Connector (MCP)",
+        "Claude Code",
+        "SuiteScript 2.1",
+        "Spec Kit"
+      ],
+      "scale": "Used daily by accounting, customer service and IT"
+    },
     {
       "id": "training-platforms",
       "category": "Training & Onboarding Platforms",
@@ -18,7 +37,12 @@
         "Course prerequisites and sequential unlocking",
         "Observability integration for server-side logging"
       ],
-      "stack": ["React 19", "SuiteScript 2.1", "Vite", "Datadog"],
+      "stack": [
+        "React 19",
+        "SuiteScript 2.1",
+        "Vite",
+        "Grafana / Loki"
+      ],
       "scale": "Used by all employees for onboarding and ongoing training"
     },
     {
@@ -31,7 +55,12 @@
         "Client-side pagination and filtering",
         "Auto-refreshing data with governance optimization"
       ],
-      "stack": ["SuiteScript 2.1", "SuiteQL", "JavaScript", "CSS"],
+      "stack": [
+        "SuiteScript 2.1",
+        "SuiteQL",
+        "JavaScript",
+        "CSS"
+      ],
       "scale": "4+ dashboards monitored daily by operations and management"
     },
     {
@@ -44,7 +73,12 @@
         "External API session management and caching",
         "Error detection with re-trigger capabilities"
       ],
-      "stack": ["REST APIs", "SuiteScript 2.1", "Scheduled Scripts", "Map/Reduce"],
+      "stack": [
+        "REST APIs",
+        "SuiteScript 2.1",
+        "Scheduled Scripts",
+        "Map/Reduce"
+      ],
       "scale": "Processes thousands of orders across multiple channels"
     },
     {
@@ -57,7 +91,12 @@
         "CSV import job monitoring and management",
         "Search usage analytics and tracking"
       ],
-      "stack": ["SuiteQL", "Map/Reduce Scripts", "JavaScript", "REST APIs"],
+      "stack": [
+        "SuiteQL",
+        "Map/Reduce Scripts",
+        "JavaScript",
+        "REST APIs"
+      ],
       "scale": "5+ tools used across departments"
     },
     {
@@ -70,7 +109,12 @@
         "Weekly summary email composer and distributor",
         "Document flow management and automation"
       ],
-      "stack": ["SuiteScript 2.1", "HTML Templating", "Custom Records", "Saved Searches"],
+      "stack": [
+        "SuiteScript 2.1",
+        "HTML Templating",
+        "Custom Records",
+        "Saved Searches"
+      ],
       "scale": "Supports daily operations across multiple teams"
     },
     {
@@ -83,7 +127,12 @@
         "Support case Kanban board with visual management",
         "Data browser for product catalog exploration"
       ],
-      "stack": ["TypeScript", "jQuery", "SuiteScript 2.1", "SuiteQL"],
+      "stack": [
+        "TypeScript",
+        "jQuery",
+        "SuiteScript 2.1",
+        "SuiteQL"
+      ],
       "scale": "Used by dev and admin teams"
     }
   ]

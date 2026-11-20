@@ -18,18 +18,20 @@ const Readme = () => {
           <PalmScene />
         </div>
         <p className="readme-subtitle">Contreras Avendano</p>
-        <p className="readme-tagline">SuiteScript &amp; JavaScript Developer &bull; Montreal, QC</p>
-        <p className="readme-version">v2.0.0</p>
+        <p className="readme-tagline">NetSuite Developer &bull; Agentic AI Workflows &bull; Montreal, QC</p>
+        <p className="readme-version">v2.1.0</p>
       </div>
 
       <section className="readme-section">
         <h2 className="section-comment">About</h2>
         <p>
-          I build internal tools, dashboards, and integrations on the NetSuite
-          platform for a mid-size distribution company. I specialize in creating
-          full-stack applications using SuiteScript 2.1 and modern JavaScript
-          frameworks that streamline business operations and extend ERP
-          capabilities.
+          I build AI agents that work directly inside NetSuite. At a licensed
+          apparel distributor, I give Claude MCP tools through the NetSuite AI
+          Connector so it can file support cases, split freight bills by brand,
+          and run credit-rebills. Every write goes through a preview, a human
+          approval, and an audit log, with the rules enforced on the server.
+          Underneath that, I ship the SuiteScript 2.1 apps, integrations, and
+          documentation the business runs on.
         </p>
         <p>
           Previously, I studied web development at College Maisonneuve in
@@ -42,6 +44,9 @@ const Readme = () => {
       <section className="readme-section">
         <h2 className="section-comment">What I Do</h2>
         <ul className="readme-list">
+          <li><span className="text-green">AI Agents on the ERP</span> — custom MCP tools for the NetSuite AI Connector, preview → approve → execute, server-side validation and audit logs</li>
+          <li><span className="text-green">Agentic Workflows</span> — Claude Code skills that turn accounting and ops runbooks into repeatable, reviewed procedures</li>
+          <li><span className="text-green">Spec-Driven Delivery</span> — every feature starts as a spec reviewed by BA and QA sub-agents before code is written</li>
           <li><span className="text-green">Custom SuiteScript Applications</span> — SuiteLets, RESTlets, scheduled scripts, and Map/Reduce scripts</li>
           <li><span className="text-green">React Front-ends</span> — modern SPAs deployed inside NetSuite via SuiteLet HTML injection</li>
           <li><span className="text-green">Third-Party Integrations</span> — WMS, e-commerce platforms, monitoring, cloud storage</li>
@@ -55,7 +60,11 @@ const Readme = () => {
         <div className="skills-grid">
           <div>
             <h3>Languages</h3>
-            <p className="text-dim">JavaScript, TypeScript, SuiteScript 2.1, HTML, CSS, SQL, SuiteQL, PHP</p>
+            <p className="text-dim">JavaScript, TypeScript, SuiteScript 2.1, SuiteQL, SQL, Python, HTML, CSS</p>
+          </div>
+          <div>
+            <h3>AI</h3>
+            <p className="text-dim">NetSuite AI Connector (MCP), Claude Code, Claude &amp; OpenAI APIs, Spec Kit, DeepL</p>
           </div>
           <div>
             <h3>Frameworks</h3>
@@ -63,11 +72,11 @@ const Readme = () => {
           </div>
           <div>
             <h3>Platforms</h3>
-            <p className="text-dim">NetSuite, E-commerce Platforms, WMS, Digital Ocean, Docker</p>
+            <p className="text-dim">NetSuite (SDF, SuiteFlow, RESTlets), Shopify / Celigo, Körber WMS, DigitalOcean, Kubernetes</p>
           </div>
           <div>
             <h3>Tools</h3>
-            <p className="text-dim">Git, GitHub Actions, Datadog, SuiteCloud CLI, Figma, WebStorm</p>
+            <p className="text-dim">Git, GitHub Actions, Grafana / Loki, SuiteCloud CLI, Docker, Kafka / Spark</p>
           </div>
         </div>
       </section>
@@ -88,7 +97,9 @@ const Readme = () => {
           <div className="prompt">
             <span>cat resume.pdf</span>
             <span className="text-dim"> → </span>
-            <a href="/PCONTRERAS_CV_FR.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a href="/PCONTRERAS_CV_EN.pdf" target="_blank" rel="noopener noreferrer">English</a>
+            <span className="text-dim"> · </span>
+            <a href="/PCONTRERAS_CV_FR.pdf" target="_blank" rel="noopener noreferrer">Français</a>
           </div>
         </div>
       </section>
